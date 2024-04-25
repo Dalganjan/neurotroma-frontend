@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { catchError, of } from 'rxjs';\nexport function appInitializer(accountService) {\n  return () => accountService.refreshToken().pipe(\n  // catch error to start app on success or failure\n  catchError(() => of()));\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

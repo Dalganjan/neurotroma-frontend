@@ -1,0 +1,17 @@
+﻿<section class="row-layout">
+    <div class="">
+<div class="p-4">
+    <div class="container">
+        <h1>Hi {{account?.firstName}}!</h1>
+    </div>
+
+    <div class="container"> 
+        <button class="btn btn-primary" *ngIf="isAssistant"> New Patient</button>
+    </div>
+
+    <div class="container"> 
+        <button class="btn btn-primary" *ngIf="isPromptDesigner">Prompt Design</button>
+    </div>
+</div>
+</div>
+</section>

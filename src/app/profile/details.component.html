@@ -1,0 +1,15 @@
+﻿<div class="container" style="padding: 4rem;">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2 mt-5">
+            <div class="card m-3">
+                <h1>My Profile</h1>
+                <p *ngIf="account">
+                    <strong>Name: </strong> {{account.title}} {{account.firstName}} {{account.lastName}}<br />
+                    <strong>Email: </strong> {{account.email}}
+                </p>
+                <p><a routerLink="update">Update Profile</a></p>
+
+            </div>
+        </div>
+    </div>
+</div>

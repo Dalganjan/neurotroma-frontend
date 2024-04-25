@@ -1,0 +1,70 @@
+$background-color_1: #fff;
+$background-color_2: #696ded;
+$color_1: #4045d5;
+$color_2: #ffa4b6;
+$color_3: #7b7fff;
+$color_4: #696ded;
+$color_5: #fff;
+$color_6: #ccceff;
+$color_7: #8d91ff;
+$font-family_1: "montserrat";
+
+.row-layout {
+  text-align: center;
+  padding: 2em;
+}
+
+.divide {
+  width: 71px;
+  height: 3px;
+  border-radius: 3px;
+  border-top: none;
+  background: $color_2;
+  margin-bottom: 0px !important;
+}
+
+.header_txt {
+  font-family: $font-family_1;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 28px;
+  font-style: normal;
+  text-align: center;
+  color: #4045d5;
+}
+
+.text-box {
+  width: 558px;
+  height: 66px;
+  border-color: #8d91ff;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 15px;
+  background: #ffffff
+}
+
+.display-center {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-connect {
+  width: 166px;
+  height: 37px;
+  opacity: 0.80;
+  border-radius: 19px;
+  background: $color_3;
+}
+
+.btn-connect:hover {
+  box-shadow: 0 4px 8px $color_7;
+}
+
+::placeholder {
+  font-family: $font-family_1;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  font-style: normal;
+  color: $color_6;
+}
