@@ -1,17 +1,21 @@
-﻿<section class="row-layout">
-    <div class="">
-<div class="p-4">
-    <div class="container">
-        <h1>Hi {{account?.firstName}}!</h1>
-    </div>
+﻿<div class="row-layout main-section" style="padding-top: 3rem;">
+    <div class="row-layout content-main">
+        <div class="view-container">
+            <section style="padding-top: 4rem;">
+                <div class="p-4 container text-center">
+                    <div class="container">
+                        <div class="vertical-center">
+                            <button class="btn btn-primary btn-size" *ngIf="isAssistant" routerLink="/patientDetails" routerLinkActive="true">+ New Patient</button>
+                        </div>
+                      </div>
 
-    <div class="container"> 
-        <button class="btn btn-primary" *ngIf="isAssistant"> New Patient</button>
-    </div>
-
-    <div class="container"> 
-        <button class="btn btn-primary" *ngIf="isPromptDesigner">Prompt Design</button>
+                    <div class="container">
+                        <div class="vertical-center">
+                            <button class="btn btn-primary btn-size" *ngIf="isPromptDesigner">Prompt Design</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </div>
 </div>
-</div>
-</section>

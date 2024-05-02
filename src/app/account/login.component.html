@@ -1,4 +1,83 @@
-﻿<div class="container" style="padding: 4rem;">
+﻿<section class="container-fluid" style="padding: 0px;">
+    <div class="left-half">
+        <!-- <h2> Neutrauma </h2> -->
+        <div class="row text-center">
+            <div class="col-12">
+                <h4 class="font-style" >Nice to see you again</h4>
+            </div>
+            <div class="col-12">
+                <h1 class="welcome-back font-style">WELCOME BACK</h1>
+                <hr class="divide">
+            </div>
+            <div class="col-12" style="display: contents;">
+                <div class="col-3"></div>
+                <p class="col-6 para-style">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                    quis nos</p>
+                <div class="col-3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="right-half">
+        <div class="row-layout"></div>
+        <div class="row-layout">
+            <img alt="home" src="/assets/neu_logo.png" decoding="async" data-nimg="1" loading="lazy"
+                style="color: transparent;" style="width: 12rem;">
+        </div>
+        <div class="row-layout no-padding-bottom">
+            <span class="lging">Login Account</span>
+        </div>
+        <div class="" style="text-align: center;">
+            <span class="enter_txt">Enter your details below.</span>
+        </div>
+        <div class="row-layout"></div>
+        <div class="">
+            <div class="card-body fgtxt">
+                <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="form-group login-form">
+                        <input type="text" formControlName="email" class="form-control text-box"
+                            [ngClass]="{ 'is-invalid': submitted && f.email.errors }" placeholder="User Name"
+                            required />
+                        <div class="" *ngIf="!(submitted && f.email.errors)"><br></div>
+                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback text-left">
+                            <div *ngIf="f.email.errors.required">Please provide a valid email address</div>
+                            <div *ngIf="f.email.errors.email">Please provide a valid email address</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" formControlName="password" class="form-control text-box"
+                            [ngClass]="{ 'is-invalid': submitted && f.password.errors }" placeholder="Password" />
+                        <div class="" *ngIf="!(submitted && f.password.errors)"><br></div>
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback text-left"
+                            [ngClass]="{ 'show-block': submitted && f.password.errors }">
+                            <div *ngIf="f.password.errors.required">Please provide correct password</div>
+                        </div>
+                    </div>
+                    <!-- <div class="form-row">
+                                    <div class="form-group col text-right">
+                                        <a routerLink="/account/forgot-password" class="btn btn-link pr-0 fgtxt">Forgot
+                                            Password?</a>
+                                    </div>
+                                </div> -->
+                    <div class="row-layout"></div>
+                    <div class="form-row">
+                        <div class="form-group col text-center">
+                            <button [disabled]="submitting" class="btn btn-primary btn-login">
+                                <span *ngIf="submitting" class="spinner-border spinner-border-sm mr-1"></span>
+                                Login
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row-layout"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- <div class="container" style="padding: 4rem;">
     <div class="row">
         <div class="col-lg-8 offset-lg-2 mt-5">
             <div class="card m-3">
@@ -42,4 +121,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->

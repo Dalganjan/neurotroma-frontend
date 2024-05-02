@@ -1,0 +1,335 @@
+<div class="mb-4 text-center">
+    <label class="patient_header">Section 1: AKA introduction</label>
+</div>
+<section class="container patient_box">
+    <div class="patient_forms_heading text-left mb-3">Motor Vehicle Accident Details </div>
+    <form [formGroup]="stepOneForm" class="form-text text-left" autocomplete="off"
+        novalidate #formRef="ngForm">
+
+        <div class="form-row mb-3">
+            <label class="form-label">1. Date of Incident:</label>
+            <div class="col-12 pl-4">
+                <input type="date" formControlName="dateOfIncident" class="form-control" style="width: 14rem"
+                    [ngClass]="{ 'is-invalid': f.dateOfIncident.errors && formRef.submitted }" />
+                <div *ngIf="f.dateOfIncident.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.dateOfIncident.errors.required">Date of Incident is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">2. Seatbelt Usage: Were you wearing a seatbelt at the time of the
+                accident?</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.seatBeltUsage.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="yes" type="radio" class="custom-control-input" value="yes" name="seatBeltUsage"
+                            formControlName="seatBeltUsage">
+                        <label class="custom-control-label" for="yes">Yes</label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="no" type="radio" class="custom-control-input" value="no" name="seatBeltUsage"
+                            formControlName="seatBeltUsage">
+                        <label class="custom-control-label" for="no">No</label>
+                    </div>
+                    <div>
+                        <input id="unsure" type="radio" class="custom-control-input" value="unsure" name="seatBeltUsage"
+                            formControlName="seatBeltUsage">
+                        <label class="custom-control-label" for="unsure">Unsure</label>
+                    </div>
+                </div>
+                <div *ngIf="f.seatBeltUsage.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.seatBeltUsage.errors.required">Seat Belt Usage is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">3. Airbag Deployment: Did the airbags deploy during the accident?</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.airbagDeployment.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="ayes" type="radio" class="custom-control-input" value="yes" name="airbagDeployment"
+                            formControlName="airbagDeployment">
+                        <label class="custom-control-label" for="ayes">Yes</label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="ano" type="radio" class="custom-control-input" value="no" name="airbagDeployment"
+                            formControlName="airbagDeployment">
+                        <label class="custom-control-label" for="ano">No</label>
+                    </div>
+                    <div>
+                        <input id="aunsure" type="radio" class="custom-control-input" value="unsure"
+                            name="airbagDeployment" formControlName="airbagDeployment">
+                        <label class="custom-control-label" for="aunsure">Unsure</label>
+                    </div>
+                </div>
+                <div *ngIf="f.airbagDeployment.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.airbagDeployment.errors.required">Air bag Deployment is
+                        required</div>
+                </div>
+            </div>
+        </div>
+
+        <div formGroupName="headImpactForm">
+            <div class="form-row mb-3">
+                <label class="form-label">4. Head Impact: Did you hit your head during the accident?</label>
+                <div class="col-12 pl-4">
+                    <div class="custom-control custom-radio"
+                        [ngClass]="{ 'is-invalid': fh.isHeadImpacted.errors && formRef.submitted }">
+                        <div style="margin-right: 3rem;">
+                            <input id="hyes" type="radio" class="custom-control-input" value="yes" name="isHeadImpacted"
+                                formControlName="isHeadImpacted">
+                            <label class="custom-control-label" for="hyes">Yes</label>
+                        </div>
+                        <div style="margin-right: 3rem;">
+                            <input id="hno" type="radio" class="custom-control-input" value="no" name="isHeadImpacted"
+                                formControlName="isHeadImpacted">
+                            <label class="custom-control-label" for="hno">No</label>
+                        </div>
+                        <div>
+                            <input id="hunsure" type="radio" class="custom-control-input" value="unsure"
+                                name="isHeadImpacted" formControlName="isHeadImpacted">
+                            <label class="custom-control-label" for="hunsure">Unsure</label>
+                        </div>
+                    </div>
+                    <div *ngIf="fh.isHeadImpacted.errors  && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fh.isHeadImpacted.errors.required">Head
+                            Impacted field is
+                            required</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">5. If yes, where did you hit your head? (Select all that apply)</label>
+                <div class="col-12">
+                    <div class="custom-radio pl-4"
+                        [ngClass]="{ 'is-invalid': fh.headImpactPosition.errors && formRef.submitted }">
+                        <div style="margin-right: 3rem;">
+                            <input id="steering" type="radio" class="custom-control-input" value="steering"
+                                name="headImpactPosition" formControlName="headImpactPosition">
+                            <label class="custom-control-label" for="steering">On the steering wheel</label>
+                        </div>
+                        <div style="margin-right: 3rem;">
+                            <input id="windshield" type="radio" class="custom-control-input" value="windshield"
+                                name="headImpactPosition" formControlName="headImpactPosition">
+                            <label class="custom-control-label" for="windshield">On the windshield</label>
+                        </div>
+                        <div style="margin-right: 3rem;">
+                            <input id="headrest" type="radio" class="custom-control-input" value="headrest"
+                                name="headImpactPosition" formControlName="headImpactPosition">
+                            <label class="custom-control-label" for="headrest">On the headrest</label>
+                        </div>
+                        <div>
+                            <input id="other" type="radio" class="custom-control-input" value="other"
+                                name="headImpactPosition" formControlName="headImpactPosition">
+                            <label class="custom-control-label" for="other">Other</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div formGroupName="vehicleDamageForm">
+            <label>6. Vehicle Damage: </label>
+            <div class="pl-4">
+
+                <div class="mb-3">
+                    <label class="form-label">a. Was the windshield cracked or shattered?</label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio"
+                            [ngClass]="{ 'is-invalid': fv.windSheild.errors && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="wayes" type="radio" class="custom-control-input" value="yes" name="windSheild"
+                                    formControlName="windSheild">
+                                <label class="custom-control-label" for="wayes">Yes</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="wano" type="radio" class="custom-control-input" value="no" name="windSheild"
+                                    formControlName="windSheild">
+                                <label class="custom-control-label" for="wano">No</label>
+                            </div>
+                            <div>
+                                <input id="waunsure" type="radio" class="custom-control-input" value="unsure" name="windSheild"
+                                    formControlName="windSheild">
+                                <label class="custom-control-label" for="waunsure">Unsure</label>
+                            </div>
+                        </div>
+                        <div *ngIf="fv.windSheild.errors && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="fv.windSheild.errors.required">
+                                Field is
+                                required</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">b. Were any of the windows broken?</label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio"
+                            [ngClass]="{ 'is-invalid': fv.windBroken.errors && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="wbyes" type="radio" class="custom-control-input" value="yes" name="windBroken"
+                                    formControlName="windBroken">
+                                <label class="custom-control-label" for="wbyes">Yes</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="wbno" type="radio" class="custom-control-input" value="no" name="windBroken"
+                                    formControlName="windBroken">
+                                <label class="custom-control-label" for="wbno">No</label>
+                            </div>
+                            <div>
+                                <input id="wbunsure" type="radio" class="custom-control-input" value="unsure" name="windBroken"
+                                    formControlName="windBroken">
+                                <label class="custom-control-label" for="wbunsure">Unsure</label>
+                            </div>
+                        </div>
+                        <div *ngIf="fv.windBroken.errors && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="fv.windBroken.errors.required">
+                                Field is
+                                required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">c. Was the car totaled?</label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio"
+                            [ngClass]="{ 'is-invalid': fv.carTotaled.errors && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="wcyes" type="radio" class="custom-control-input" value="yes" name="carTotaled"
+                                    formControlName="carTotaled">
+                                <label class="custom-control-label" for="wcyes">Yes</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="wcno" type="radio" class="custom-control-input" value="no" name="carTotaled"
+                                    formControlName="carTotaled">
+                                <label class="custom-control-label" for="wcno">No</label>
+                            </div>
+                            <div>
+                                <input id="wcunsure" type="radio" class="custom-control-input" value="unsure" name="carTotaled"
+                                    formControlName="carTotaled">
+                                <label class="custom-control-label" for="wcunsure">Unsure</label>
+                            </div>
+                        </div>
+                        <div *ngIf="fv.carTotaled.errors && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="fv.carTotaled.errors.required">
+                                Field is
+                                required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div formGroupName="concussionMemoryForm">
+
+            <label>7. Consciousness and Memory</label>
+            <div class="pl-4">
+                <div class="mb-3">
+                    <label class="form-label">a. Did you experience any loss of consciousness?</label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio"
+                            [ngClass]="{ 'is-invalid': fc.concussion.errors?.['required'] && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="cayes" type="radio" class="custom-control-input" value="yes" name="concussion"
+                                    formControlName="concussion">
+                                <label class="custom-control-label" for="cayes">Yes</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="cano" type="radio" class="custom-control-input" value="no" name="concussion"
+                                    formControlName="concussion">
+                                <label class="custom-control-label" for="cano">No</label>
+                            </div>
+                            <div>
+                                <input id="caunsure" type="radio" class="custom-control-input" value="unsure" name="concussion"
+                                    formControlName="concussion">
+                                <label class="custom-control-label" for="caunsure">Unsure</label>
+                            </div>
+                        </div>
+                        <div *ngIf="fc.concussion.errors?.['required'] && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="fc.concussion.errors?.['required']">
+                                Field is
+                                required</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">b. Were any of the windows broken?</label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio"
+                            [ngClass]="{ 'is-invalid': fc.windowBroken.errors && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="cbyes" type="radio" class="custom-control-input" value="yes" name="windowBroken"
+                                    formControlName="windowBroken">
+                                <label class="custom-control-label" for="cbyes">Yes</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="cbno" type="radio" class="custom-control-input" value="no" name="windowBroken"
+                                    formControlName="windowBroken">
+                                <label class="custom-control-label" for="cbno">No</label>
+                            </div>
+                            <div>
+                                <input id="cbunsure" type="radio" class="custom-control-input" value="unsure" name="windowBroken"
+                                    formControlName="windowBroken">
+                                <label class="custom-control-label" for="cbunsure">Unsure</label>
+                            </div>
+                        </div>
+                        <div *ngIf="fc.windowBroken.errors && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="fc.windowBroken.errors.required">
+                                Field is
+                                required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">c. Was the car totaled?</label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio"
+                            [ngClass]="{ 'is-invalid': fc.carrTotaled.errors && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="ccyes" type="radio" class="custom-control-input" value="yes" name="carrTotaled"
+                                    formControlName="carrTotaled">
+                                <label class="custom-control-label" for="ccyes">Yes</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="ccno" type="radio" class="custom-control-input" value="no" name="carrTotaled"
+                                    formControlName="carrTotaled">
+                                <label class="custom-control-label" for="ccno">No</label>
+                            </div>
+                            <div>
+                                <input id="ccunsure" type="radio" class="custom-control-input" value="unsure" name="carrTotaled"
+                                    formControlName="carrTotaled">
+                                <label class="custom-control-label" for="ccunsure">Unsure</label>
+                            </div>
+                        </div>
+                        <div *ngIf="fc.carrTotaled.errors && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="fc.carrTotaled.errors.required">
+                                Field is
+                                required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-layout"></div>
+
+        <div class="form-row">
+            <div class="form-group col-4">
+                <button class="btn btn-warning btn-can-size" (click)="cancelPatient()" >Cancel</button>
+            </div>
+            <div class="form-group col-8 text-right">
+                <button class="btn btn-primary btn-co-size" (click)="stepOneSubmit()" cdkStepperNext>Next &#8594;</button>
+            </div>
+        </div>
+
+    </form>
+</section>

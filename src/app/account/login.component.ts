@@ -4,8 +4,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
 import { AccountService, AlertService } from '@app/_services';
+import { Account } from '@app/_models';
 
-@Component({ templateUrl: 'login.component.html' })
+@Component({ templateUrl: 'login.component.html', styleUrls: ['./login.component.scss'] })
 export class LoginComponent implements OnInit {
     form!: FormGroup;
     submitting = false;
@@ -17,7 +18,11 @@ export class LoginComponent implements OnInit {
         private router: Router,
         private accountService: AccountService,
         private alertService: AlertService
-    ) { }
+    ) {
+        if(this.accountService.accountValue) {
+            this.router.navigate(['/dashboard']);
+        }
+     }
 
     ngOnInit() {
         this.form = this.formBuilder.group({

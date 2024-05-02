@@ -1,0 +1,170 @@
+<div class="mb-4 text-center">
+    <label class="patient_header">Section 4: IMPACT assessment</label>
+</div>
+<section class="container patient_box">
+    <div class="patient_forms_heading text-left mb-3">Impact Details </div>
+    <form [formGroup]="stepFiveForm" class="form-text text-left" autocomplete="off" novalidate #formRef="ngForm">
+
+        <div class="form-row mb-3">
+            <label class="form-label">1. Date of Accident:</label>
+            <div class="col-12 pl-4">
+                <input type="date" formControlName="dateOfAccident" class="form-control" style="width: 14rem"
+                    [ngClass]="{ 'is-invalid': f.dateOfAccident.errors && formRef.submitted }" />
+                <div *ngIf="f.dateOfAccident.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.dateOfAccident.errors.required">Date of Incident is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">2. Date of Assesment:</label>
+            <div class="col-12 pl-4">
+                <input type="date" formControlName="dateOfAssesment" class="form-control" style="width: 14rem"
+                    [ngClass]="{ 'is-invalid': f.dateOfAssesment.errors && formRef.submitted }" />
+                <div *ngIf="f.dateOfAssesment.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.dateOfAssesment.errors.required">Date of Incident is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="patient_form_sub_heading mb-3">
+            <span>The following fields are all required if the Sway is proided and each response is a numerical value
+                between 1-100.</span>
+        </div>
+
+        <div formGroupName="symptoms">
+            <div class="patient_form_sub_heading mb-4" style="color: #2d70b8;font-size: 18px;"> Symptoms </div>
+            <div class="form-row mb-3 pl-4">
+                <label class="form-label">Physical</label>
+                <div class="col-12 pl-4">
+                    <ngx-slider formControlName="physical" [options]="options" 
+                        [ngClass]="{ 'is-invalid': f.physical.errors && formRef.submitted }"></ngx-slider>
+                    <div *ngIf="fs.physical.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fs.physical.errors.required">Field is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row mb-3 pl-4">
+                <label class="form-label">Cognitive</label>
+                <div class="col-12 pl-4">
+                    <ngx-slider formControlName="cognitive" [options]="options" 
+                        [ngClass]="{ 'is-invalid': f.cognitive.errors && formRef.submitted }"></ngx-slider>
+                    <div *ngIf="fs.cognitive.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fs.cognitive.errors.required">Field is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row mb-3 pl-4">
+                <label class="form-label">Emotional</label>
+                <div class="col-12 pl-4">
+                    <ngx-slider formControlName="emotional" [options]="options" 
+                        [ngClass]="{ 'is-invalid': f.emotional.errors && formRef.submitted }"></ngx-slider>
+                    <div *ngIf="fs.emotional.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fs.emotional.errors.required">Field is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row mb-3 pl-4">
+                <label class="form-label">Sleep-Arousal</label>
+                <div class="col-12 pl-4">
+                    <ngx-slider formControlName="sleepArousal" [options]="options" 
+                        [ngClass]="{ 'is-invalid': f.sleepArousal.errors && formRef.submitted }"></ngx-slider>
+                    <div *ngIf="fs.sleepArousal.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fs.sleepArousal.errors.required">Field is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div formGroupName="balance">
+            <div class="patient_form_sub_heading mb-4" style="color: #2d70b8;font-size: 18px;"> Balance </div>
+            <div class="form-row mb-3 pl-4">
+                <label class="form-label">MBESS</label>
+                <div class="col-12 pl-4">
+                    <ngx-slider formControlName="mbess" [options]="options" 
+                        [ngClass]="{ 'is-invalid': fba.mbess.errors && formRef.submitted }"></ngx-slider>
+                    <div *ngIf="fba.mbess.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fba.mbess.errors.required">Field is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div formGroupName="cognitive">
+            <div class="patient_form_sub_heading mb-4" style="color: #2d70b8;font-size: 18px;"> Cognitive </div>
+            <div class="form-row mb-3 pl-4">
+                <label class="form-label">Memory</label>
+                <div class="col-12 pl-4">
+                    <ngx-slider formControlName="memory" [options]="options" 
+                        [ngClass]="{ 'is-invalid': fc.memory.errors && formRef.submitted }"></ngx-slider>
+                    <div *ngIf="fc.memory.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fc.memory.errors.required">Field is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row mb-3 pl-4">
+                <label class="form-label">Reaction Time</label>
+                <div class="col-12 pl-4">
+                    <ngx-slider formControlName="reactionTime" [options]="options" 
+                        [ngClass]="{ 'is-invalid': fc.reactionTime.errors && formRef.submitted }"></ngx-slider>
+                    <div *ngIf="fc.reactionTime.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fc.reactionTime.errors.required">Field is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row mb-3 pl-4">
+                <label class="form-label">Impulse Control</label>
+                <div class="col-12 pl-4">
+                    <ngx-slider formControlName="impulseControl" [options]="options" 
+                        [ngClass]="{ 'is-invalid': fc.impulseControl.errors && formRef.submitted }"></ngx-slider>
+                    <div *ngIf="fc.impulseControl.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fc.impulseControl.errors.required">Field is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row mb-3 pl-4">
+                <label class="form-label">Inspection Time</label>
+                <div class="col-12 pl-4">
+                    <ngx-slider formControlName="inspectionTime" [options]="options" 
+                        [ngClass]="{ 'is-invalid': fc.inspectionTime.errors && formRef.submitted }"></ngx-slider>
+                    <div *ngIf="fc.inspectionTime.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fc.inspectionTime.errors.required">Field is required
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row-layout"></div>
+
+        <div class="form-row">
+            <div class="form-group col-4">
+                <button class="btn btn-warning btn-can-size" (click)="cancelPatient()">Cancel</button>
+            </div>
+            <div class="form-group col-4 text-right">
+                <button class="button btn-primary btn-co-size" cdkStepperPrevious>&#8592; Back</button>
+            </div>
+            <div class="form-group col-4 text-right">
+                <button class="btn btn-primary btn-co-size" (click)="stepFiveSubmit()" cdkStepperNext>Next
+                    &#8594;</button>
+            </div>
+        </div>
+
+    </form>
+</section>
