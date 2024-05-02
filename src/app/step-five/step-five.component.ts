@@ -7,7 +7,7 @@ import { Options } from '@angular-slider/ngx-slider';
 @Component({
   selector: 'app-step-five',
   templateUrl: './step-five.component.html',
-  styleUrls: ['./step-five.component.less']
+  styleUrls: ['./step-five.component.less', '../patient/patient.component.scss']
 })
 export class StepFiveComponent implements OnInit {
   public stepFiveForm: FormGroup;
@@ -55,6 +55,10 @@ export class StepFiveComponent implements OnInit {
   stepFiveSubmit() {
     this.state = 'done';
     console.log(this.stepFiveForm);
+    if (!this.stepFiveForm.invalid) {
+      this.patientService.setPatientData({ 'section_5': this.stepFiveForm.value });
+      console.log(this.patientService.getPatientData());
+    }
   }
 
   cancelPatient() {

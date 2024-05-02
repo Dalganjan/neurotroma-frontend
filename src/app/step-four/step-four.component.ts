@@ -6,7 +6,7 @@ import { PatientService } from '@app/_services';
 @Component({
   selector: 'app-step-four',
   templateUrl: './step-four.component.html',
-  styleUrls: ['./step-four.component.scss']
+  styleUrls: ['./step-four.component.scss', '../patient/patient.component.scss']
 })
 export class StepFourComponent implements OnInit {
   public stepFourForm: FormGroup;
@@ -26,9 +26,8 @@ export class StepFourComponent implements OnInit {
   get f() { return this.stepFourForm.controls; }
 
   stepFourSubmit() {
-    this.patientService.resetPatientData();
     if (!this.stepFourForm.invalid) {
-      this.patientService.setPatientData({ 'section_1': this.stepFourForm.value });
+      this.patientService.setPatientData({ 'section_4': this.stepFourForm.value });
       console.log(this.patientService.getPatientData());
     }
   }

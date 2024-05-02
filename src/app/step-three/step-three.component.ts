@@ -6,7 +6,7 @@ import { PatientService, SharedService } from '@app/_services';
 @Component({
   selector: 'app-step-three',
   templateUrl: './step-three.component.html',
-  styleUrls: ['./step-three.component.scss']
+  styleUrls: ['./step-three.component.scss', '../patient/patient.component.scss']
 })
 export class StepThreeComponent implements OnInit {
   public stepThreeForm: FormGroup;
@@ -18,43 +18,43 @@ export class StepThreeComponent implements OnInit {
     this.stepThreeForm = this.fb.group({
       dailyRoutine: this.fb.group({
         dailyRoutineMeasure: this.fb.control('', Validators.required),
-        dailyRoutingText: this.fb.control('')
+        dailyRoutineText: this.fb.control('',  Validators.required)
       }),
       mobility: this.fb.group({
         mobilityMeasure: this.fb.control('', Validators.required),
-        mobilityText: this.fb.control('')
+        mobilityText: this.fb.control('',  Validators.required)
       }),
       household: this.fb.group({
         householdMeasure: this.fb.control('', Validators.required),
-        householdText: this.fb.control('')
+        householdText: this.fb.control('',  Validators.required)
       }),
       work: this.fb.group({
         workMeasure: this.fb.control('', Validators.required),
-        workText: this.fb.control('')
+        workText: this.fb.control('',  Validators.required)
       }),
       social: this.fb.group({
         socialMeasure: this.fb.control('', Validators.required),
-        socialText: this.fb.control('')
+        socialText: this.fb.control('',  Validators.required)
       }),
       leisure: this.fb.group({
         leisureMeasure: this.fb.control('', Validators.required),
-        leisureText: this.fb.control('')
+        leisureText: this.fb.control('',  Validators.required)
       }),
       family: this.fb.group({
         familyMeasure: this.fb.control('', Validators.required),
-        familyText: this.fb.control('')
+        familyText: this.fb.control('',  Validators.required)
       }),
       physical: this.fb.group({
         physicalMeasure: this.fb.control('', Validators.required),
-        physicalText: this.fb.control('')
+        physicalText: this.fb.control('',  Validators.required)
       }),
       quality: this.fb.group({
         qualityMeasure: this.fb.control('', Validators.required),
-        qualityText: this.fb.control('')
+        qualityText: this.fb.control('',  Validators.required)
       }),
       future: this.fb.group({
         futureMeasure: this.fb.control('', Validators.required),
-        futureText: this.fb.control('')
+        futureText: this.fb.control('',  Validators.required)
       }),
     });
   }

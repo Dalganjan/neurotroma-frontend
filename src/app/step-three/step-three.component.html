@@ -65,15 +65,15 @@
                             </label>
                         </div>
                     </div>
-                    <div *ngIf="f.dailyRoutineMeasure.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="f.dailyRoutineMeasure.errors.required">Field is required
+                    <div *ngIf="fd.dailyRoutineMeasure.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fd.dailyRoutineMeasure.errors.required">Field is required
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 pl-4">
-                    <div class="" [ngClass]="{ 'is-invalid': fd.dailyRoutineText.errors && formRef.submitted }">
-                        <textarea formControlName="dailyRoutineText" ></textarea>
+                    <div class="form-group">
+                        <textarea formControlName="dailyRoutineText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fd.dailyRoutineText.errors && formRef.submitted }"></textarea>
                     </div>
                     <div *ngIf="fd.dailyRoutineText.errors && formRef.submitted" class="invalid-feedback">
                         <div *ngIf="fd.dailyRoutineText.errors.required">Field is required
@@ -127,8 +127,8 @@
                 </div>
 
                 <div class="col-12 pl-4">
-                    <div class="" [ngClass]="{ 'is-invalid': fm.mobilityText.errors && formRef.submitted }">
-                        <textarea formControlName="mobilityText"></textarea>
+                    <div class="">
+                        <textarea formControlName="mobilityText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fm.mobilityText.errors && formRef.submitted }"></textarea>
                     </div>
                     <div *ngIf="fm.mobilityText.errors && formRef.submitted" class="invalid-feedback">
                         <div *ngIf="fm.mobilityText.errors.required">Field is required
@@ -182,8 +182,8 @@
                 </div>
 
                 <div class="col-12 pl-4">
-                    <div class="" [ngClass]="{ 'is-invalid': fh.householdText.errors && formRef.submitted }">
-                        <textarea formControlName="householdText"></textarea>
+                    <div class="">
+                        <textarea formControlName="householdText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fh.householdText.errors && formRef.submitted }"></textarea>
                     </div>
                     <div *ngIf="fh.householdText.errors && formRef.submitted" class="invalid-feedback">
                         <div *ngIf="fh.householdText.errors.required">Field is required
@@ -237,8 +237,8 @@
                 </div>
 
                 <div class="col-12 pl-4">
-                    <div class="" [ngClass]="{ 'is-invalid': fw.workText.errors && formRef.submitted }">
-                        <textarea formControlName="workText"></textarea>
+                    <div class="">
+                        <textarea formControlName="workText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fw.workText.errors && formRef.submitted }"></textarea>
                     </div>
                     <div *ngIf="fw.workText.errors && formRef.submitted" class="invalid-feedback">
                         <div *ngIf="fw.workText.errors.required">Field is required
@@ -292,8 +292,8 @@
                 </div>
 
                 <div class="col-12 pl-4">
-                    <div class="" [ngClass]="{ 'is-invalid': fs.socialText.errors && formRef.submitted }">
-                        <textarea formControlName="socialText"></textarea>
+                    <div class="">
+                        <textarea formControlName="socialText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fs.socialText.errors && formRef.submitted }"></textarea>
                     </div>
                     <div *ngIf="fs.socialText.errors && formRef.submitted" class="invalid-feedback">
                         <div *ngIf="fs.socialText.errors.required">Field is required
@@ -347,8 +347,8 @@
                 </div>
 
                 <div class="col-12 pl-4">
-                    <div class="" [ngClass]="{ 'is-invalid': fl.leisureText.errors && formRef.submitted }">
-                        <textarea formControlName="leisureText"></textarea>
+                    <div class="">
+                        <textarea formControlName="leisureText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fl.leisureText.errors && formRef.submitted }"></textarea>
                     </div>
                     <div *ngIf="fl.leisureText.errors && formRef.submitted" class="invalid-feedback">
                         <div *ngIf="fl.leisureText.errors.required">Field is required
@@ -402,8 +402,8 @@
                 </div>
 
                 <div class="col-12 pl-4">
-                    <div class="" [ngClass]="{ 'is-invalid': ff.familyText.errors && formRef.submitted }">
-                        <textarea formControlName="familyText"></textarea>
+                    <div class="">
+                        <textarea formControlName="familyText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': ff.familyText.errors && formRef.submitted }"></textarea>
                     </div>
                     <div *ngIf="ff.familyText.errors && formRef.submitted" class="invalid-feedback">
                         <div *ngIf="ff.familyText.errors.required">Field is required
@@ -457,8 +457,8 @@
                 </div>
 
                 <div class="col-12 pl-4">
-                    <div class="" [ngClass]="{ 'is-invalid': fp.physicalText.errors && formRef.submitted }">
-                        <textarea formControlName="physicalText"></textarea>
+                    <div class="">
+                        <textarea formControlName="physicalText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fp.physicalText.errors && formRef.submitted }"></textarea>
                     </div>
                     <div *ngIf="fp.physicalText.errors && formRef.submitted" class="invalid-feedback">
                         <div *ngIf="fp.physicalText.errors.required">Field is required
@@ -512,8 +512,8 @@
                 </div>
 
                 <div class="col-12 pl-4">
-                    <div class="" [ngClass]="{ 'is-invalid': fq.qualityText.errors && formRef.submitted }">
-                        <textarea formControlName="qualityText"></textarea>
+                    <div class="">
+                        <textarea formControlName="qualityText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fq.qualityText.errors && formRef.submitted }"></textarea>
                     </div>
                     <div *ngIf="fq.qualityText.errors && formRef.submitted" class="invalid-feedback">
                         <div *ngIf="fq.qualityText.errors.required">Field is required
@@ -567,8 +567,8 @@
                 </div>
 
                 <div class="col-12 pl-4">
-                    <div class="" [ngClass]="{ 'is-invalid': ffu.futureText.errors && formRef.submitted }">
-                        <textarea formControlName="futureText"></textarea>
+                    <div class="">
+                        <textarea formControlName="futureText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': ffu.futureText.errors && formRef.submitted }"></textarea>
                     </div>
                     <div *ngIf="ffu.futureText.errors && formRef.submitted" class="invalid-feedback">
                         <div *ngIf="ffu.futureText.errors.required">Field is required

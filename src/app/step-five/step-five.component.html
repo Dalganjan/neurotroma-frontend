@@ -40,7 +40,7 @@
                 <label class="form-label">Physical</label>
                 <div class="col-12 pl-4">
                     <ngx-slider formControlName="physical" [options]="options" 
-                        [ngClass]="{ 'is-invalid': f.physical.errors && formRef.submitted }"></ngx-slider>
+                        [ngClass]="{ 'is-invalid': fs.physical.errors && formRef.submitted }"></ngx-slider>
                     <div *ngIf="fs.physical.errors && formRef.submitted" class="invalid-feedback">
                         <div *ngIf="fs.physical.errors.required">Field is required
                         </div>
@@ -52,7 +52,7 @@
                 <label class="form-label">Cognitive</label>
                 <div class="col-12 pl-4">
                     <ngx-slider formControlName="cognitive" [options]="options" 
-                        [ngClass]="{ 'is-invalid': f.cognitive.errors && formRef.submitted }"></ngx-slider>
+                        [ngClass]="{ 'is-invalid': fs.cognitive.errors && formRef.submitted }"></ngx-slider>
                     <div *ngIf="fs.cognitive.errors && formRef.submitted" class="invalid-feedback">
                         <div *ngIf="fs.cognitive.errors.required">Field is required
                         </div>
@@ -64,7 +64,7 @@
                 <label class="form-label">Emotional</label>
                 <div class="col-12 pl-4">
                     <ngx-slider formControlName="emotional" [options]="options" 
-                        [ngClass]="{ 'is-invalid': f.emotional.errors && formRef.submitted }"></ngx-slider>
+                        [ngClass]="{ 'is-invalid': fs.emotional.errors && formRef.submitted }"></ngx-slider>
                     <div *ngIf="fs.emotional.errors && formRef.submitted" class="invalid-feedback">
                         <div *ngIf="fs.emotional.errors.required">Field is required
                         </div>
@@ -76,7 +76,7 @@
                 <label class="form-label">Sleep-Arousal</label>
                 <div class="col-12 pl-4">
                     <ngx-slider formControlName="sleepArousal" [options]="options" 
-                        [ngClass]="{ 'is-invalid': f.sleepArousal.errors && formRef.submitted }"></ngx-slider>
+                        [ngClass]="{ 'is-invalid': fs.sleepArousal.errors && formRef.submitted }"></ngx-slider>
                     <div *ngIf="fs.sleepArousal.errors && formRef.submitted" class="invalid-feedback">
                         <div *ngIf="fs.sleepArousal.errors.required">Field is required
                         </div>
