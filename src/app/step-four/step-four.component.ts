@@ -26,6 +26,7 @@ export class StepFourComponent implements OnInit {
   get f() { return this.stepFourForm.controls; }
 
   stepFourSubmit() {
+    this.patientService.deletePatientData('section_4');
     if (!this.stepFourForm.invalid) {
       this.patientService.setPatientData({ 'section_4': this.stepFourForm.value });
       console.log(this.patientService.getPatientData());

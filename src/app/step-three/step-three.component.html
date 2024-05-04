@@ -580,16 +580,15 @@
 
         <div class="row-layout"></div>
 
-        <div class="form-row">
-            <div class="form-group col-4">
-                <button class="btn btn-warning btn-can-size" (click)="cancelPatient()">Cancel</button>
-            </div>
-            <div class="form-group col-4 text-right">
-                <button class="button btn-primary btn-co-size" cdkStepperPrevious>&#8592; Back</button>
-            </div>
-            <div class="form-group col-4 text-right">
-                <button class="btn btn-primary btn-co-size" (click)="stepThreeSubmit()" cdkStepperNext>Next
-                    &#8594;</button>
+        <div class="container mt-3">
+            <div class="row justify-content-between">
+              <div class="col-auto">
+                <button class="btn btn-warning btn-can-size" (click)="cancelPatient()" >Cancel</button>
+              </div>
+              <div class="col-auto">
+                <button class="button btn-primary btn-co-size mr-2" cdkStepperPrevious>&#8592; Previous</button>
+                <button class="btn btn-primary btn-co-size" (click)="stepThreeSubmit()" cdkStepperNext>Next &#8594;</button>
+              </div>
             </div>
         </div>
 

@@ -6,6 +6,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CdkStepperModule } from '@angular/cdk/stepper';
 import { NgStepperModule } from 'angular-ng-stepper';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { ClipboardModule } from '@angular/cdk/clipboard';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
@@ -24,6 +25,9 @@ import { StepFourComponent } from './step-four/step-four.component';
 import { StepOneComponent } from './step-one/step-one.component';
 import { StepThreeComponent } from './step-three/step-three.component';
 import { StepTwoComponent } from './step-two/step-two.component';
+import { TreatmentComponent } from './treatment/treatment.component';
+import { StepSixComponent } from './step-six/step-six.component';
+import { jsonprettypipe } from './_pipe/jsonpretty.pipe';
 
 @NgModule({
     imports: [
@@ -36,6 +40,7 @@ import { StepTwoComponent } from './step-two/step-two.component';
         CdkStepperModule,
         NgStepperModule,
         NgxSliderModule,
+        ClipboardModule,
     ],
     declarations: [
         AppComponent,
@@ -48,6 +53,9 @@ import { StepTwoComponent } from './step-two/step-two.component';
         StepThreeComponent,
         StepFourComponent,
         StepFiveComponent,
+        TreatmentComponent,
+        StepSixComponent,
+        jsonprettypipe
     ],
     providers: [
         { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AccountService] },

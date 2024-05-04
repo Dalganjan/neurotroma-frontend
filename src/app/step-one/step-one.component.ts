@@ -57,7 +57,7 @@ export class StepOneComponent implements OnInit {
   }
 
   stepOneSubmit() {
-    this.patientService.resetPatientData();
+    this.patientService.deletePatientData('section_1');
     if (!this.stepOneForm.invalid) {
       this.patientService.setPatientData({ 'section_1': this.stepOneForm.value });
       this.sharedService.updateStepOneValue(this.stepOneForm.value.dateOfIncident);

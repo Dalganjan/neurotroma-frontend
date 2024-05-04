@@ -1,0 +1,66 @@
+<div class="row-layout main-section" style="padding-top: 3rem;">
+    <div class="row-layout content-main">
+        <div class="view-container">
+            <section style="padding-top: 4rem;" #pdfSection id="pdfSection">
+                <div class="p-4 container text-center">
+                    <div class="mb-4 text-center">
+                        <label class="patient_header">Section 7: Treatment Details</label>
+                    </div>
+
+                    <form [formGroup]="form">
+                        <div formArrayName="items">
+                            <div *ngFor="let item of f; let i = index" [formGroupName]="i">
+                                <section class="container patient_box mb-4" style="padding: 2rem;">
+                                    <div class="text-right" *ngIf="!isEditing(i)">
+                                        <label class="form_txt_light">
+                                            <i class="bx bx-x" style="font-size: x-large;" (click)="editItem(i)"></i>
+                                        </label>
+                                    </div>
+                                    <div *ngIf="!isEditing(i)" class="form-row mb-3">
+                                        {{ item.value.text }}
+                                    </div>
+                                    <div class="row-layout"></div>
+                                    <div *ngIf="isEditing(i)" class="form-row mb-3">
+                                        <div class="col-12 mb-2">
+                                        <textarea formControlName="text" class="form-text form-control" style="width: 98%;"></textarea>
+                                        </div>
+                                        <div class="col-12 text-right">
+                                            <button class="btn btn-primary btn-co-size" (click)="saveItem(i)">Save</button>
+                                            &nbsp; &nbsp;
+                                            <button class="btn btn-primary btn-co-size" (click)="cancelEdit(i)">Cancel</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="col-9">
+                                        <ngx-slider formControlName="wordLimit" [options]="options"></ngx-slider>
+                                        </div>
+                                        <div class="col-1"></div>
+                                        <div class="col-2">
+                                            <button class="btn btn-primary btn-co-size" (click)="regenerate(i)">Regenerate</button>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <div class="row-layout"></div>
+
+
+            <div class="container mt-3">
+                <div class="row justify-content-between">
+                  <div class="col-auto">
+                    <button class="btn btn-warning btn-can-size" (click)="cancelPatient()" >Cancel</button>
+                  </div>
+                  <div class="col-auto">
+                    <button class="btn btn-primary btn-co-size mr-2" style="width: 300px;" (click)="copyToClipboard()">Copy to Clipboard</button>
+                    <button class="btn btn-primary btn-co-size"  style="width: 300px;" (click)="download(pdfSection)">Download</button>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -90,6 +90,7 @@ export class StepThreeComponent implements OnInit {
   get ffu() { return (this.stepThreeForm.get('future') as FormGroup).controls }
 
   stepThreeSubmit() {
+    this.patientService.deletePatientData('section_3');
     if (!this.stepThreeForm.invalid) {
       this.patientService.setPatientData({ 'section_3': this.stepThreeForm.value });
       this.sharedService.updateStepOneValue(this.dateOfInjury);

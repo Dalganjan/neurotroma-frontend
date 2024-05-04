@@ -23,6 +23,11 @@
         "@angular-slider/ngx-slider": "^15.0.1",
         "rxjs": "~7.5.0",
         "tslib": "^2.3.0",
+        "@types/html2canvas": "^0.5.35",
+        "jspdf": "^2.5.1",
+        "bootstrap": "^5.0.0",
+        "core-js": "^3.12.1",
+        "html2canvas": "^1.0.0-rc.7",
         "zone.js": "~0.12.0"
     },
     "devDependencies": {

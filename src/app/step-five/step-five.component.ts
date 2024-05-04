@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { PatientService } from '@app/_services';
+import { AccountService, AssistantService, PatientService, SharedService } from '@app/_services';
 import { Options } from '@angular-slider/ngx-slider';
+import { Account } from '@app/_models';
 
 @Component({
   selector: 'app-step-five',
@@ -11,32 +12,31 @@ import { Options } from '@angular-slider/ngx-slider';
 })
 export class StepFiveComponent implements OnInit {
   public stepFiveForm: FormGroup;
-  state!: string;
   options: Options = {
     floor: 0,
     ceil: 100
   };
 
   constructor(private fb: FormBuilder, private patientService: PatientService, 
-    private router: Router
+    private router: Router, private sharedService: SharedService
   ) {
     this.stepFiveForm = this.fb.group({
       dateOfAccident: this.fb.control('', Validators.required),
       dateOfAssesment: this.fb.control('', Validators.required),
       symptoms: this.fb.group({
-        physical: this.fb.control('', Validators.required),
-        cognitive: this.fb.control('', Validators.required),
-        emotional: this.fb.control('', Validators.required),
-        sleepArousal: this.fb.control('', Validators.required),
+        physical: this.fb.control(0, Validators.required),
+        cognitive: this.fb.control(0, Validators.required),
+        emotional: this.fb.control(0, Validators.required),
+        sleepArousal: this.fb.control(0, Validators.required),
       }),
       balance: this.fb.group({
-        mbess: this.fb.control('', Validators.required),
+        mbess: this.fb.control(0, Validators.required),
       }),
       cognitive: this.fb.group({
-        memory: this.fb.control('', Validators.required),
-        reactionTime: this.fb.control('', Validators.required),
-        impulseControl: this.fb.control('', Validators.required),
-        inspectionTime: this.fb.control('', Validators.required),
+        memory: this.fb.control(0, Validators.required),
+        reactionTime: this.fb.control(0, Validators.required),
+        impulseControl: this.fb.control(0, Validators.required),
+        inspectionTime: this.fb.control(0, Validators.required),
       })
     });
   }
@@ -53,10 +53,11 @@ export class StepFiveComponent implements OnInit {
   get fc() { return (this.stepFiveForm.get('cognitive') as FormGroup).controls; }
 
   stepFiveSubmit() {
-    this.state = 'done';
     console.log(this.stepFiveForm);
+    this.patientService.deletePatientData('section_5');
     if (!this.stepFiveForm.invalid) {
       this.patientService.setPatientData({ 'section_5': this.stepFiveForm.value });
+      this.sharedService.updatePatientReviewData(this.patientService.getPatientData());
       console.log(this.patientService.getPatientData());
     }
   }

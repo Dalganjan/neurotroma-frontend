@@ -36,12 +36,20 @@
                             <app-step-four #stepFour></app-step-four>
                         </cdk-step>
 
-                        <cdk-step [stepControl]="stepFive.stepFiveForm" [optional]="false" [state]="stepFive.state">
+                        <cdk-step [stepControl]="stepFive.stepFiveForm" [optional]="false">
                             <ng-template cdkStepLabel>
                                 <div class="step-bullet">5</div>
                                 <div class="step-title">Sway results<span class="required">*</span></div>
                             </ng-template>
                             <app-step-five #stepFive></app-step-five>
+                        </cdk-step>
+
+                        <cdk-step [stepControl]="stepSix.stepSixForm" [optional]="true" [state]="stepSix.state">
+                            <ng-template cdkStepLabel>
+                                <div class="step-bullet">6</div>
+                                <div class="step-title">Preview Details<span class="required">*</span></div>
+                            </ng-template>
+                            <app-step-six #stepSix></app-step-six>
                         </cdk-step>
                     </ng-stepper>
                 </div>

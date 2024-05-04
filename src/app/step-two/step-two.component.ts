@@ -48,6 +48,7 @@ export class StepTwoComponent implements OnInit {
   }
 
   stepTwoSubmit() {
+    this.patientService.deletePatientData('section_2');
     if (!this.stepTwoForm.invalid) {
       this.patientService.setPatientData({ 'section_2': this.stepTwoForm.value });
       this.sharedService.updateStepOneValue(this.dateOfInjury);
