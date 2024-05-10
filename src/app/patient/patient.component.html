@@ -9,7 +9,7 @@
                                 <div class="step-bullet">1</div>
                                 <div class="step-title">AKA introduction<span class="required">*</span></div>
                             </ng-template>
-                            <app-step-one #stepOne></app-step-one>
+                            <app-step-one class="pt-4" #stepOne></app-step-one>
                         </cdk-step>
 
                         <cdk-step [stepControl]="stepTwo.stepTwoForm" [optional]="false">
@@ -17,7 +17,7 @@
                                 <div class="step-bullet">2</div>
                                 <div class="step-title">Aka Stanford questionnair<span class="required">*</span></div>
                             </ng-template>
-                            <app-step-two #stepTwo></app-step-two>
+                            <app-step-two class="pt-4" #stepTwo></app-step-two>
                         </cdk-step>
 
                         <cdk-step [stepControl]="stepThree.stepThreeForm" [optional]="false">
@@ -25,7 +25,7 @@
                                 <div class="step-bullet">3</div>
                                 <div class="step-title">AKA CIFQ AKA <span class="required">*</span></div>
                             </ng-template>
-                            <app-step-three #stepThree></app-step-three>
+                            <app-step-three class="pt-4" #stepThree></app-step-three>
                         </cdk-step>
 
                         <cdk-step [stepControl]="stepFour.stepFourForm" [optional]="false">
@@ -33,7 +33,7 @@
                                 <div class="step-bullet">4</div>
                                 <div class="step-title">Impact Assesment<span class="required">*</span></div>
                             </ng-template>
-                            <app-step-four #stepFour></app-step-four>
+                            <app-step-four class="pt-4" #stepFour></app-step-four>
                         </cdk-step>
 
                         <cdk-step [stepControl]="stepFive.stepFiveForm" [optional]="false">
@@ -41,7 +41,7 @@
                                 <div class="step-bullet">5</div>
                                 <div class="step-title">Sway results<span class="required">*</span></div>
                             </ng-template>
-                            <app-step-five #stepFive></app-step-five>
+                            <app-step-five class="pt-4" #stepFive></app-step-five>
                         </cdk-step>
 
                         <cdk-step [stepControl]="stepSix.stepSixForm" [optional]="true" [state]="stepSix.state">
@@ -49,7 +49,7 @@
                                 <div class="step-bullet">6</div>
                                 <div class="step-title">Preview Details<span class="required">*</span></div>
                             </ng-template>
-                            <app-step-six #stepSix></app-step-six>
+                            <app-step-six class="pt-4" #stepSix></app-step-six>
                         </cdk-step>
                     </ng-stepper>
                 </div>

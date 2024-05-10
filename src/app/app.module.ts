@@ -28,6 +28,7 @@ import { StepTwoComponent } from './step-two/step-two.component';
 import { TreatmentComponent } from './treatment/treatment.component';
 import { StepSixComponent } from './step-six/step-six.component';
 import { jsonprettypipe } from './_pipe/jsonpretty.pipe';
+import { PromptdesginerComponent } from './promptdesginer/promptdesginer.component';
 
 @NgModule({
     imports: [
@@ -55,7 +56,8 @@ import { jsonprettypipe } from './_pipe/jsonpretty.pipe';
         StepFiveComponent,
         TreatmentComponent,
         StepSixComponent,
-        jsonprettypipe
+        jsonprettypipe,
+        PromptdesginerComponent
     ],
     providers: [
         { provide: APP_INITIALIZER, useFactory: appInitializer, multi: true, deps: [AccountService] },

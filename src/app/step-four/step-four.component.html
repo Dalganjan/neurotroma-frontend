@@ -9,10 +9,10 @@
         <div class="form-row mb-3">
             <label class="form-label">1. Date of Accident:</label>
             <div class="col-12 pl-4">
-                <input type="date" formControlName="dateOfAccident" class="form-control" style="width: 14rem"
-                    [ngClass]="{ 'is-invalid': f.dateOfAccident.errors && formRef.submitted }" />
-                <div *ngIf="f.dateOfAccident.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.dateOfAccident.errors.required">Date of Incident is required
+                <input type="date" formControlName="Intro_Date_Of_Incident" class="form-control" style="width: 14rem"
+                    [ngClass]="{ 'is-invalid': f.Intro_Date_Of_Incident.errors && formRef.submitted }" />
+                <div *ngIf="f.Intro_Date_Of_Incident.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Intro_Date_Of_Incident.errors.required">Date of Incident is required
                     </div>
                 </div>
             </div>
@@ -21,10 +21,94 @@
         <div class="form-row mb-3">
             <label class="form-label">2. Date of Assesment:</label>
             <div class="col-12 pl-4">
-                <input type="date" formControlName="dateOfAssesment" class="form-control" style="width: 14rem"
-                    [ngClass]="{ 'is-invalid': f.dateOfAssesment.errors && formRef.submitted }" />
-                <div *ngIf="f.dateOfAssesment.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.dateOfAssesment.errors.required">Date of Incident is required
+                <input type="date" formControlName="Intro_Date_Of_Visit" class="form-control" style="width: 14rem"
+                    [ngClass]="{ 'is-invalid': f.Intro_Date_Of_Visit.errors && formRef.submitted }" />
+                <div *ngIf="f.Intro_Date_Of_Visit.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Intro_Date_Of_Visit.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">3. Date of Evaluation:</label>
+            <div class="col-12 pl-4">
+                <input type="date" formControlName="Impact_Date_of_Eval" class="form-control" style="width: 14rem"
+                    [ngClass]="{ 'is-invalid': f.Impact_Date_of_Eval.errors && formRef.submitted }" />
+                <div *ngIf="f.Impact_Date_of_Eval.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Impact_Date_of_Eval.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">4. Word Memory(WM):</label>
+            <div class="col-12 pl-4">
+                <ngx-slider formControlName="Impact_Word_Memory_percentage" [options]="options" 
+                    [ngClass]="{ 'is-invalid': f.Impact_Word_Memory_percentage.errors && formRef.submitted }"></ngx-slider>    
+                <div *ngIf="f.Impact_Word_Memory_percentage.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Impact_Word_Memory_percentage.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">5. Design Memory (DM):</label>
+            <div class="col-12 pl-4">
+                <ngx-slider formControlName="Impact_Design_Memory_percentage" [options]="options" 
+                    [ngClass]="{ 'is-invalid': f.Impact_Design_Memory_percentage.errors && formRef.submitted }"></ngx-slider>
+                <div *ngIf="f.Impact_Design_Memory_percentage.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Impact_Design_Memory_percentage.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">6. X's and O's (XO):</label>
+            <div class="col-12 pl-4">
+                <ngx-slider formControlName="Impact_XO" [options]="options" 
+                    [ngClass]="{ 'is-invalid': f.Impact_XO.errors && formRef.submitted }"></ngx-slider>
+                <div *ngIf="f.Impact_XO.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Impact_XO.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">7. Symbol Match (SM):</label>
+            <div class="col-12 pl-4">
+                <ngx-slider formControlName="Impact_Symbol_Match" [options]="options" 
+                    [ngClass]="{ 'is-invalid': f.Impact_Symbol_Match.errors && formRef.submitted }"></ngx-slider>
+                <div *ngIf="f.Impact_Symbol_Match.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Impact_Symbol_Match.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">8. Color Match (Cm):</label>
+            <div class="col-12 pl-4">
+                <ngx-slider formControlName="Impact_Color_Match" [options]="options" 
+                    [ngClass]="{ 'is-invalid': f.Impact_Color_Match.errors && formRef.submitted }"></ngx-slider>
+                <div *ngIf="f.Impact_Color_Match.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Impact_Color_Match.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">9. Three Letters (TL):</label>
+            <div class="col-12 pl-4">
+                <ngx-slider formControlName="Impact_Three_Letters" [options]="options" 
+                    [ngClass]="{ 'is-invalid': f.Impact_Three_Letters.errors && formRef.submitted }"></ngx-slider>
+                <div *ngIf="f.Impact_Three_Letters.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Impact_Three_Letters.errors.required">Field is required
                     </div>
                 </div>
             </div>
@@ -38,7 +122,7 @@
                 <button class="btn btn-warning btn-can-size" (click)="cancelPatient()" >Cancel</button>
               </div>
               <div class="col-auto">
-                <button class="button btn-primary btn-co-size mr-2" cdkStepperPrevious>&#8592; Previous</button>
+                <button class="btn btn-primary btn-co-size mr-2" cdkStepperPrevious>&#8592; Previous</button>
                 <button class="btn btn-primary btn-co-size" (click)="stepFourSubmit()" cdkStepperNext>Next &#8594;</button>
               </div>
             </div>

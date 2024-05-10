@@ -5,30 +5,6 @@
     <div class="patient_forms_heading text-left mb-3">Sway Result</div>
     <form [formGroup]="stepFiveForm" class="form-text text-left" autocomplete="off" novalidate #formRef="ngForm">
 
-        <div class="form-row mb-3">
-            <label class="form-label">1. Date of Accident:</label>
-            <div class="col-12 pl-4">
-                <input type="date" formControlName="dateOfAccident" class="form-control" style="width: 14rem"
-                    [ngClass]="{ 'is-invalid': f.dateOfAccident.errors && formRef.submitted }" />
-                <div *ngIf="f.dateOfAccident.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.dateOfAccident.errors.required">Date of Incident is required
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="form-row mb-3">
-            <label class="form-label">2. Date of Assesment:</label>
-            <div class="col-12 pl-4">
-                <input type="date" formControlName="dateOfAssesment" class="form-control" style="width: 14rem"
-                    [ngClass]="{ 'is-invalid': f.dateOfAssesment.errors && formRef.submitted }" />
-                <div *ngIf="f.dateOfAssesment.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.dateOfAssesment.errors.required">Date of Incident is required
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="patient_form_sub_heading mb-3">
             <span>The following fields are all required if the Sway is proided and each response is a numerical value
                 between 1-100.</span>
@@ -90,10 +66,10 @@
             <div class="form-row mb-3 pl-4">
                 <label class="form-label">MBESS</label>
                 <div class="col-12 pl-4">
-                    <ngx-slider formControlName="mbess" [options]="options" 
-                        [ngClass]="{ 'is-invalid': fba.mbess.errors && formRef.submitted }"></ngx-slider>
-                    <div *ngIf="fba.mbess.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fba.mbess.errors.required">Field is required
+                    <ngx-slider formControlName="Sway_MBESS_Percentile" [options]="options" 
+                        [ngClass]="{ 'is-invalid': fba.Sway_MBESS_Percentile.errors && formRef.submitted }"></ngx-slider>
+                    <div *ngIf="fba.Sway_MBESS_Percentile.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fba.Sway_MBESS_Percentile.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -105,10 +81,10 @@
             <div class="form-row mb-3 pl-4">
                 <label class="form-label">Memory</label>
                 <div class="col-12 pl-4">
-                    <ngx-slider formControlName="memory" [options]="options" 
-                        [ngClass]="{ 'is-invalid': fc.memory.errors && formRef.submitted }"></ngx-slider>
-                    <div *ngIf="fc.memory.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fc.memory.errors.required">Field is required
+                    <ngx-slider formControlName="Sway_Memory_Percentile" [options]="options" 
+                        [ngClass]="{ 'is-invalid': fc.Sway_Memory_Percentile.errors && formRef.submitted }"></ngx-slider>
+                    <div *ngIf="fc.Sway_Memory_Percentile.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fc.Sway_Memory_Percentile.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -117,10 +93,10 @@
             <div class="form-row mb-3 pl-4">
                 <label class="form-label">Reaction Time</label>
                 <div class="col-12 pl-4">
-                    <ngx-slider formControlName="reactionTime" [options]="options" 
-                        [ngClass]="{ 'is-invalid': fc.reactionTime.errors && formRef.submitted }"></ngx-slider>
-                    <div *ngIf="fc.reactionTime.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fc.reactionTime.errors.required">Field is required
+                    <ngx-slider formControlName="Sway_ReactionTime_Percentile" [options]="options" 
+                        [ngClass]="{ 'is-invalid': fc.Sway_ReactionTime_Percentile.errors && formRef.submitted }"></ngx-slider>
+                    <div *ngIf="fc.Sway_ReactionTime_Percentile.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fc.Sway_ReactionTime_Percentile.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -129,10 +105,10 @@
             <div class="form-row mb-3 pl-4">
                 <label class="form-label">Impulse Control</label>
                 <div class="col-12 pl-4">
-                    <ngx-slider formControlName="impulseControl" [options]="options" 
-                        [ngClass]="{ 'is-invalid': fc.impulseControl.errors && formRef.submitted }"></ngx-slider>
-                    <div *ngIf="fc.impulseControl.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fc.impulseControl.errors.required">Field is required
+                    <ngx-slider formControlName="Sway_ImpulseControl_Percentile" [options]="options" 
+                        [ngClass]="{ 'is-invalid': fc.Sway_ImpulseControl_Percentile.errors && formRef.submitted }"></ngx-slider>
+                    <div *ngIf="fc.Sway_ImpulseControl_Percentile.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fc.Sway_ImpulseControl_Percentile.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -141,10 +117,10 @@
             <div class="form-row mb-3 pl-4">
                 <label class="form-label">Inspection Time</label>
                 <div class="col-12 pl-4">
-                    <ngx-slider formControlName="inspectionTime" [options]="options" 
-                        [ngClass]="{ 'is-invalid': fc.inspectionTime.errors && formRef.submitted }"></ngx-slider>
-                    <div *ngIf="fc.inspectionTime.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fc.inspectionTime.errors.required">Field is required
+                    <ngx-slider formControlName="Sway_InspectionTime_Percentile" [options]="options" 
+                        [ngClass]="{ 'is-invalid': fc.Sway_InspectionTime_Percentile.errors && formRef.submitted }"></ngx-slider>
+                    <div *ngIf="fc.Sway_InspectionTime_Percentile.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fc.Sway_InspectionTime_Percentile.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -159,7 +135,7 @@
                 <button class="btn btn-warning btn-can-size" (click)="cancelPatient()" >Cancel</button>
               </div>
               <div class="col-auto">
-                <button class="button btn-primary btn-co-size mr-2" cdkStepperPrevious>&#8592; Previous</button>
+                <button class="btn btn-primary btn-co-size mr-2" cdkStepperPrevious>&#8592; Previous</button>
                 <button class="btn btn-primary btn-co-size" (click)="stepFiveSubmit()" cdkStepperNext>Next &#8594;</button>
               </div>
             </div>

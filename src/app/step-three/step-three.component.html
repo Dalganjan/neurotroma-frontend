@@ -33,50 +33,50 @@
                     managing daily routines, such as personal care and preparing meals."</label>
                 <div class="col-12 pl-4">
                     <div class="custom-control custom-radio"
-                        [ngClass]="{ 'is-invalid': fd.dailyRoutineMeasure.errors && formRef.submitted }">
+                        [ngClass]="{ 'is-invalid': fd.CIFQ_Routine_Score.errors && formRef.submitted }">
                         <div style="margin-right: 3rem;">
-                            <input id="daily0" type="radio" class="custom-control-input" value="0" name="dailyRoutineMeasure"
-                                formControlName="dailyRoutineMeasure">
+                            <input id="daily0" type="radio" class="custom-control-input" value="0" name="CIFQ_Routine_Score"
+                                formControlName="CIFQ_Routine_Score">
                             <label class="custom-control-label" for="daily0">0 = Never Experienced
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="daily01" type="radio" class="custom-control-input" value="1" name="dailyRoutineMeasure"
-                                formControlName="dailyRoutineMeasure">
+                            <input id="daily01" type="radio" class="custom-control-input" value="1" name="CIFQ_Routine_Score"
+                                formControlName="CIFQ_Routine_Score">
                             <label class="custom-control-label" for="daily01">1 = Mild
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="daily02" type="radio" class="custom-control-input" value="2" name="dailyRoutineMeasure"
-                                formControlName="dailyRoutineMeasure">
+                            <input id="daily02" type="radio" class="custom-control-input" value="2" name="CIFQ_Routine_Score"
+                                formControlName="CIFQ_Routine_Score">
                             <label class="custom-control-label" for="daily02">2 = Moderate
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="daily03" type="radio" class="custom-control-input" value="3" name="dailyRoutineMeasure"
-                                formControlName="dailyRoutineMeasure">
+                            <input id="daily03" type="radio" class="custom-control-input" value="3" name="CIFQ_Routine_Score"
+                                formControlName="CIFQ_Routine_Score">
                             <label class="custom-control-label" for="daily03">3 = Severe
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="daily0R" type="radio" class="custom-control-input" value="R" name="dailyRoutineMeasure"
-                                formControlName="dailyRoutineMeasure">
+                            <input id="daily0R" type="radio" class="custom-control-input" value="R" name="CIFQ_Routine_Score"
+                                formControlName="CIFQ_Routine_Score">
                             <label class="custom-control-label" for="daily0R">R = Resolved
                             </label>
                         </div>
                     </div>
-                    <div *ngIf="fd.dailyRoutineMeasure.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fd.dailyRoutineMeasure.errors.required">Field is required
+                    <div *ngIf="fd.CIFQ_Routine_Score.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fd.CIFQ_Routine_Score.errors.required">Field is required
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 pl-4">
                     <div class="form-group">
-                        <textarea formControlName="dailyRoutineText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fd.dailyRoutineText.errors && formRef.submitted }"></textarea>
+                        <textarea formControlName="CIFQ_Routine_Notes" class="form-text form-control" rows="3" cols="100" [ngClass]="{ 'is-invalid': fd.CIFQ_Routine_Notes.errors && formRef.submitted }"></textarea>
                     </div>
-                    <div *ngIf="fd.dailyRoutineText.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fd.dailyRoutineText.errors.required">Field is required
+                    <div *ngIf="fd.CIFQ_Routine_Notes.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fd.CIFQ_Routine_Notes.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -88,50 +88,50 @@
                 <label class="form-label">2. Mobility and Transportation <br> "Rate any difficulties you've encountered with mobility or using transportation, including driving and public transport."</label>
                 <div class="col-12 pl-4">
                     <div class="custom-control custom-radio"
-                        [ngClass]="{ 'is-invalid': fm.mobilityMeasure.errors && formRef.submitted }">
+                        [ngClass]="{ 'is-invalid': fm.CIFQ_Mobility_Score.errors && formRef.submitted }">
                         <div style="margin-right: 3rem;">
-                            <input id="mobility0" type="radio" class="custom-control-input" value="0" name="mobilityMeasure"
-                                formControlName="mobilityMeasure">
+                            <input id="mobility0" type="radio" class="custom-control-input" value="0" name="CIFQ_Mobility_Score"
+                                formControlName="CIFQ_Mobility_Score">
                             <label class="custom-control-label" for="mobility0">0 = Never Experienced
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="mobility01" type="radio" class="custom-control-input" value="1" name="mobilityMeasure"
-                                formControlName="mobilityMeasure">
+                            <input id="mobility01" type="radio" class="custom-control-input" value="1" name="CIFQ_Mobility_Score"
+                                formControlName="CIFQ_Mobility_Score">
                             <label class="custom-control-label" for="mobility01">1 = Mild
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="mobility02" type="radio" class="custom-control-input" value="2" name="mobilityMeasure"
-                                formControlName="mobilityMeasure">
+                            <input id="mobility02" type="radio" class="custom-control-input" value="2" name="CIFQ_Mobility_Score"
+                                formControlName="CIFQ_Mobility_Score">
                             <label class="custom-control-label" for="mobility02">2 = Moderate
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="mobility03" type="radio" class="custom-control-input" value="3" name="mobilityMeasure"
-                                formControlName="mobilityMeasure">
+                            <input id="mobility03" type="radio" class="custom-control-input" value="3" name="CIFQ_Mobility_Score"
+                                formControlName="CIFQ_Mobility_Score">
                             <label class="custom-control-label" for="mobility03">3 = Severe
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="mobility0R" type="radio" class="custom-control-input" value="R" name="mobilityMeasure"
-                                formControlName="mobilityMeasure">
+                            <input id="mobility0R" type="radio" class="custom-control-input" value="R" name="CIFQ_Mobility_Score"
+                                formControlName="CIFQ_Mobility_Score">
                             <label class="custom-control-label" for="mobility0R">R = Resolved
                             </label>
                         </div>
                     </div>
-                    <div *ngIf="fm.mobilityMeasure.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fm.mobilityMeasure.errors.required">Field is required
+                    <div *ngIf="fm.CIFQ_Mobility_Score.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fm.CIFQ_Mobility_Score.errors.required">Field is required
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 pl-4">
                     <div class="">
-                        <textarea formControlName="mobilityText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fm.mobilityText.errors && formRef.submitted }"></textarea>
+                        <textarea formControlName="CIFQ_Mobility_Notes" class="form-text form-control" rows="3" cols="100" [ngClass]="{ 'is-invalid': fm.CIFQ_Mobility_Notes.errors && formRef.submitted }"></textarea>
                     </div>
-                    <div *ngIf="fm.mobilityText.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fm.mobilityText.errors.required">Field is required
+                    <div *ngIf="fm.CIFQ_Mobility_Notes.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fm.CIFQ_Mobility_Notes.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -143,50 +143,50 @@
                 <label class="form-label">3. Household Responsibilities <br> "Rate the impact of your injury on your ability to handle household responsibilities, like cleaning and paying bills."</label>
                 <div class="col-12 pl-4">
                     <div class="custom-control custom-radio"
-                        [ngClass]="{ 'is-invalid': fh.householdMeasure.errors && formRef.submitted }">
+                        [ngClass]="{ 'is-invalid': fh.CIFQ_Houshold_Score.errors && formRef.submitted }">
                         <div style="margin-right: 3rem;">
-                            <input id="household0" type="radio" class="custom-control-input" value="0" name="householdMeasure"
-                                formControlName="householdMeasure">
+                            <input id="household0" type="radio" class="custom-control-input" value="0" name="CIFQ_Houshold_Score"
+                                formControlName="CIFQ_Houshold_Score">
                             <label class="custom-control-label" for="household0">0 = Never Experienced
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="household01" type="radio" class="custom-control-input" value="1" name="householdMeasure"
-                                formControlName="householdMeasure">
+                            <input id="household01" type="radio" class="custom-control-input" value="1" name="CIFQ_Houshold_Score"
+                                formControlName="CIFQ_Houshold_Score">
                             <label class="custom-control-label" for="household01">1 = Mild
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="household02" type="radio" class="custom-control-input" value="2" name="householdMeasure"
-                                formControlName="householdMeasure">
+                            <input id="household02" type="radio" class="custom-control-input" value="2" name="CIFQ_Houshold_Score"
+                                formControlName="CIFQ_Houshold_Score">
                             <label class="custom-control-label" for="household02">2 = Moderate
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="household03" type="radio" class="custom-control-input" value="3" name="householdMeasure"
-                                formControlName="householdMeasure">
+                            <input id="household03" type="radio" class="custom-control-input" value="3" name="CIFQ_Houshold_Score"
+                                formControlName="CIFQ_Houshold_Score">
                             <label class="custom-control-label" for="household03">3 = Severe
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="household0R" type="radio" class="custom-control-input" value="R" name="householdMeasure"
-                                formControlName="householdMeasure">
+                            <input id="household0R" type="radio" class="custom-control-input" value="R" name="CIFQ_Houshold_Score"
+                                formControlName="CIFQ_Houshold_Score">
                             <label class="custom-control-label" for="household0R">R = Resolved
                             </label>
                         </div>
                     </div>
-                    <div *ngIf="fh.householdMeasure.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fh.householdMeasure.errors.required">Field is required
+                    <div *ngIf="fh.CIFQ_Houshold_Score.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fh.CIFQ_Houshold_Score.errors.required">Field is required
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 pl-4">
                     <div class="">
-                        <textarea formControlName="householdText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fh.householdText.errors && formRef.submitted }"></textarea>
+                        <textarea formControlName="CIFQ_Houshold_Notes" class="form-text form-control" rows="3" cols="100" [ngClass]="{ 'is-invalid': fh.CIFQ_Houshold_Notes.errors && formRef.submitted }"></textarea>
                     </div>
-                    <div *ngIf="fh.householdText.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fh.householdText.errors.required">Field is required
+                    <div *ngIf="fh.CIFQ_Houshold_Notes.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fh.CIFQ_Houshold_Notes.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -198,50 +198,50 @@
                 <label class="form-label">4. Work or Academic Performance <br> "Rate the impact of your concussion on your performance and productivity at work or in academic settings."</label>
                 <div class="col-12 pl-4">
                     <div class="custom-control custom-radio"
-                        [ngClass]="{ 'is-invalid': fw.workMeasure.errors && formRef.submitted }">
+                        [ngClass]="{ 'is-invalid': fw.CIFQ_Work_Score.errors && formRef.submitted }">
                         <div style="margin-right: 3rem;">
-                            <input id="work0" type="radio" class="custom-control-input" value="0" name="workMeasure"
-                                formControlName="workMeasure">
+                            <input id="work0" type="radio" class="custom-control-input" value="0" name="CIFQ_Work_Score"
+                                formControlName="CIFQ_Work_Score">
                             <label class="custom-control-label" for="work0">0 = Never Experienced
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="work01" type="radio" class="custom-control-input" value="1" name="workMeasure"
-                                formControlName="workMeasure">
+                            <input id="work01" type="radio" class="custom-control-input" value="1" name="CIFQ_Work_Score"
+                                formControlName="CIFQ_Work_Score">
                             <label class="custom-control-label" for="work01">1 = Mild
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="work02" type="radio" class="custom-control-input" value="2" name="workMeasure"
-                                formControlName="workMeasure">
+                            <input id="work02" type="radio" class="custom-control-input" value="2" name="CIFQ_Work_Score"
+                                formControlName="CIFQ_Work_Score">
                             <label class="custom-control-label" for="work02">2 = Moderate
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="work03" type="radio" class="custom-control-input" value="3" name="workMeasure"
-                                formControlName="workMeasure">
+                            <input id="work03" type="radio" class="custom-control-input" value="3" name="CIFQ_Work_Score"
+                                formControlName="CIFQ_Work_Score">
                             <label class="custom-control-label" for="work03">3 = Severe
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="work0R" type="radio" class="custom-control-input" value="R" name="workMeasure"
-                                formControlName="workMeasure">
+                            <input id="work0R" type="radio" class="custom-control-input" value="R" name="CIFQ_Work_Score"
+                                formControlName="CIFQ_Work_Score">
                             <label class="custom-control-label" for="work0R">R = Resolved
                             </label>
                         </div>
                     </div>
-                    <div *ngIf="fw.workMeasure.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fw.workMeasure.errors.required">Field is required
+                    <div *ngIf="fw.CIFQ_Work_Score.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fw.CIFQ_Work_Score.errors.required">Field is required
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 pl-4">
                     <div class="">
-                        <textarea formControlName="workText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fw.workText.errors && formRef.submitted }"></textarea>
+                        <textarea formControlName="CIFQ_Work_Notes" class="form-text form-control" rows="3" cols="100" [ngClass]="{ 'is-invalid': fw.CIFQ_Work_Notes.errors && formRef.submitted }"></textarea>
                     </div>
-                    <div *ngIf="fw.workText.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fw.workText.errors.required">Field is required
+                    <div *ngIf="fw.CIFQ_Work_Notes.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fw.CIFQ_Work_Notes.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -253,50 +253,50 @@
                 <label class="form-label">5. Social Interaction and Activities <br> "Rate the change in your engagement with social interactions and participation in social activities."</label>
                 <div class="col-12 pl-4">
                     <div class="custom-control custom-radio"
-                        [ngClass]="{ 'is-invalid': fs.socialMeasure.errors && formRef.submitted }">
+                        [ngClass]="{ 'is-invalid': fs.CIFQ_Social_Score.errors && formRef.submitted }">
                         <div style="margin-right: 3rem;">
-                            <input id="social0" type="radio" class="custom-control-input" value="0" name="socialMeasure"
-                                formControlName="socialMeasure">
+                            <input id="social0" type="radio" class="custom-control-input" value="0" name="CIFQ_Social_Score"
+                                formControlName="CIFQ_Social_Score">
                             <label class="custom-control-label" for="social0">0 = Never Experienced
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="social01" type="radio" class="custom-control-input" value="1" name="socialMeasure"
-                                formControlName="socialMeasure">
+                            <input id="social01" type="radio" class="custom-control-input" value="1" name="CIFQ_Social_Score"
+                                formControlName="CIFQ_Social_Score">
                             <label class="custom-control-label" for="social01">1 = Mild
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="social02" type="radio" class="custom-control-input" value="2" name="socialMeasure"
-                                formControlName="socialMeasure">
+                            <input id="social02" type="radio" class="custom-control-input" value="2" name="CIFQ_Social_Score"
+                                formControlName="CIFQ_Social_Score">
                             <label class="custom-control-label" for="social02">2 = Moderate
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="social03" type="radio" class="custom-control-input" value="3" name="socialMeasure"
-                                formControlName="socialMeasure">
+                            <input id="social03" type="radio" class="custom-control-input" value="3" name="CIFQ_Social_Score"
+                                formControlName="CIFQ_Social_Score">
                             <label class="custom-control-label" for="social03">3 = Severe
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="social0R" type="radio" class="custom-control-input" value="R" name="socialMeasure"
-                                formControlName="socialMeasure">
+                            <input id="social0R" type="radio" class="custom-control-input" value="R" name="CIFQ_Social_Score"
+                                formControlName="CIFQ_Social_Score">
                             <label class="custom-control-label" for="social0R">R = Resolved
                             </label>
                         </div>
                     </div>
-                    <div *ngIf="fs.socialMeasure.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fs.socialMeasure.errors.required">Field is required
+                    <div *ngIf="fs.CIFQ_Social_Score.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fs.CIFQ_Social_Score.errors.required">Field is required
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 pl-4">
                     <div class="">
-                        <textarea formControlName="socialText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fs.socialText.errors && formRef.submitted }"></textarea>
+                        <textarea formControlName="CIFQ_Social_Notes" class="form-text form-control" rows="3" cols="100" [ngClass]="{ 'is-invalid': fs.CIFQ_Social_Notes.errors && formRef.submitted }"></textarea>
                     </div>
-                    <div *ngIf="fs.socialText.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fs.socialText.errors.required">Field is required
+                    <div *ngIf="fs.CIFQ_Social_Notes.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fs.CIFQ_Social_Notes.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -308,50 +308,50 @@
                 <label class="form-label">6. Leisure Activities and Hobbies <br> "Rate how much your involvement in hobbies or leisure activities has been affected."</label>
                 <div class="col-12 pl-4">
                     <div class="custom-control custom-radio"
-                        [ngClass]="{ 'is-invalid': fl.leisureMeasure.errors && formRef.submitted }">
+                        [ngClass]="{ 'is-invalid': fl.CIFQ_Leisure_Score.errors && formRef.submitted }">
                         <div style="margin-right: 3rem;">
-                            <input id="leisure0" type="radio" class="custom-control-input" value="0" name="leisureMeasure"
-                                formControlName="leisureMeasure">
+                            <input id="leisure0" type="radio" class="custom-control-input" value="0" name="CIFQ_Leisure_Score"
+                                formControlName="CIFQ_Leisure_Score">
                             <label class="custom-control-label" for="leisure0">0 = Never Experienced
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="leisure01" type="radio" class="custom-control-input" value="1" name="leisureMeasure"
-                                formControlName="leisureMeasure">
+                            <input id="leisure01" type="radio" class="custom-control-input" value="1" name="CIFQ_Leisure_Score"
+                                formControlName="CIFQ_Leisure_Score">
                             <label class="custom-control-label" for="leisure01">1 = Mild
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="leisure02" type="radio" class="custom-control-input" value="2" name="leisureMeasure"
-                                formControlName="leisureMeasure">
+                            <input id="leisure02" type="radio" class="custom-control-input" value="2" name="CIFQ_Leisure_Score"
+                                formControlName="CIFQ_Leisure_Score">
                             <label class="custom-control-label" for="leisure02">2 = Moderate
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="leisure03" type="radio" class="custom-control-input" value="3" name="leisureMeasure"
-                                formControlName="leisureMeasure">
+                            <input id="leisure03" type="radio" class="custom-control-input" value="3" name="CIFQ_Leisure_Score"
+                                formControlName="CIFQ_Leisure_Score">
                             <label class="custom-control-label" for="leisure03">3 = Severe
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="leisure0R" type="radio" class="custom-control-input" value="R" name="leisureMeasure"
-                                formControlName="leisureMeasure">
+                            <input id="leisure0R" type="radio" class="custom-control-input" value="R" name="CIFQ_Leisure_Score"
+                                formControlName="CIFQ_Leisure_Score">
                             <label class="custom-control-label" for="leisure0R">R = Resolved
                             </label>
                         </div>
                     </div>
-                    <div *ngIf="fl.leisureMeasure.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fl.leisureMeasure.errors.required">Field is required
+                    <div *ngIf="fl.CIFQ_Leisure_Score.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fl.CIFQ_Leisure_Score.errors.required">Field is required
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 pl-4">
                     <div class="">
-                        <textarea formControlName="leisureText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fl.leisureText.errors && formRef.submitted }"></textarea>
+                        <textarea formControlName="CIFQ_Leisure_Notes" class="form-text form-control" rows="3" cols="100" [ngClass]="{ 'is-invalid': fl.CIFQ_Leisure_Notes.errors && formRef.submitted }"></textarea>
                     </div>
-                    <div *ngIf="fl.leisureText.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fl.leisureText.errors.required">Field is required
+                    <div *ngIf="fl.CIFQ_Leisure_Notes.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fl.CIFQ_Leisure_Notes.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -363,50 +363,50 @@
                 <label class="form-label">7. Family and Relationship Dynamics <br> "Rate any changes in your relationships with family and close friends since the injury."</label>
                 <div class="col-12 pl-4">
                     <div class="custom-control custom-radio"
-                        [ngClass]="{ 'is-invalid': ff.familyMeasure.errors && formRef.submitted }">
+                        [ngClass]="{ 'is-invalid': ff.CIFQ_Family_Score.errors && formRef.submitted }">
                         <div style="margin-right: 3rem;">
-                            <input id="family0" type="radio" class="custom-control-input" value="0" name="familyMeasure"
-                                formControlName="familyMeasure">
+                            <input id="family0" type="radio" class="custom-control-input" value="0" name="CIFQ_Family_Score"
+                                formControlName="CIFQ_Family_Score">
                             <label class="custom-control-label" for="family0">0 = Never Experienced
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="family01" type="radio" class="custom-control-input" value="1" name="familyMeasure"
-                                formControlName="familyMeasure">
+                            <input id="family01" type="radio" class="custom-control-input" value="1" name="CIFQ_Family_Score"
+                                formControlName="CIFQ_Family_Score">
                             <label class="custom-control-label" for="family01">1 = Mild
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="family02" type="radio" class="custom-control-input" value="2" name="familyMeasure"
-                                formControlName="familyMeasure">
+                            <input id="family02" type="radio" class="custom-control-input" value="2" name="CIFQ_Family_Score"
+                                formControlName="CIFQ_Family_Score">
                             <label class="custom-control-label" for="family02">2 = Moderate
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="family03" type="radio" class="custom-control-input" value="3" name="familyMeasure"
-                                formControlName="familyMeasure">
+                            <input id="family03" type="radio" class="custom-control-input" value="3" name="CIFQ_Family_Score"
+                                formControlName="CIFQ_Family_Score">
                             <label class="custom-control-label" for="family03">3 = Severe
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="family0R" type="radio" class="custom-control-input" value="R" name="familyMeasure"
-                                formControlName="familyMeasure">
+                            <input id="family0R" type="radio" class="custom-control-input" value="R" name="CIFQ_Family_Score"
+                                formControlName="CIFQ_Family_Score">
                             <label class="custom-control-label" for="family0R">R = Resolved
                             </label>
                         </div>
                     </div>
-                    <div *ngIf="ff.familyMeasure.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="ff.familyMeasure.errors.required">Field is required
+                    <div *ngIf="ff.CIFQ_Family_Score.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="ff.CIFQ_Family_Score.errors.required">Field is required
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 pl-4">
                     <div class="">
-                        <textarea formControlName="familyText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': ff.familyText.errors && formRef.submitted }"></textarea>
+                        <textarea formControlName="CIFQ_Family_Notes" class="form-text form-control" rows="3" cols="100" [ngClass]="{ 'is-invalid': ff.CIFQ_Family_Notes.errors && formRef.submitted }"></textarea>
                     </div>
-                    <div *ngIf="ff.familyText.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="ff.familyText.errors.required">Field is required
+                    <div *ngIf="ff.CIFQ_Family_Notes.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="ff.CIFQ_Family_Notes.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -418,50 +418,50 @@
                 <label class="form-label">8. Physical Exercise and Activity <br> "Rate how your ability to engage in physical exercise and activity has been affected."</label>
                 <div class="col-12 pl-4">
                     <div class="custom-control custom-radio"
-                        [ngClass]="{ 'is-invalid': fp.physicalMeasure.errors && formRef.submitted }">
+                        [ngClass]="{ 'is-invalid': fp.CIFQ_Physical_Score.errors && formRef.submitted }">
                         <div style="margin-right: 3rem;">
-                            <input id="physical0" type="radio" class="custom-control-input" value="0" name="physicalMeasure"
-                                formControlName="physicalMeasure">
+                            <input id="physical0" type="radio" class="custom-control-input" value="0" name="CIFQ_Physical_Score"
+                                formControlName="CIFQ_Physical_Score">
                             <label class="custom-control-label" for="physical0">0 = Never Experienced
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="physical01" type="radio" class="custom-control-input" value="1" name="physicalMeasure"
-                                formControlName="physicalMeasure">
+                            <input id="physical01" type="radio" class="custom-control-input" value="1" name="CIFQ_Physical_Score"
+                                formControlName="CIFQ_Physical_Score">
                             <label class="custom-control-label" for="physical01">1 = Mild
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="physical02" type="radio" class="custom-control-input" value="2" name="physicalMeasure"
-                                formControlName="physicalMeasure">
+                            <input id="physical02" type="radio" class="custom-control-input" value="2" name="CIFQ_Physical_Score"
+                                formControlName="CIFQ_Physical_Score">
                             <label class="custom-control-label" for="physical02">2 = Moderate
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="physical03" type="radio" class="custom-control-input" value="3" name="physicalMeasure"
-                                formControlName="physicalMeasure">
+                            <input id="physical03" type="radio" class="custom-control-input" value="3" name="CIFQ_Physical_Score"
+                                formControlName="CIFQ_Physical_Score">
                             <label class="custom-control-label" for="physical03">3 = Severe
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="physical0R" type="radio" class="custom-control-input" value="R" name="physicalMeasure"
-                                formControlName="physicalMeasure">
+                            <input id="physical0R" type="radio" class="custom-control-input" value="R" name="CIFQ_Physical_Score"
+                                formControlName="CIFQ_Physical_Score">
                             <label class="custom-control-label" for="physical0R">R = Resolved
                             </label>
                         </div>
                     </div>
-                    <div *ngIf="fp.physicalMeasure.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fp.physicalMeasure.errors.required">Field is required
+                    <div *ngIf="fp.CIFQ_Physical_Score.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fp.CIFQ_Physical_Score.errors.required">Field is required
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 pl-4">
                     <div class="">
-                        <textarea formControlName="physicalText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fp.physicalText.errors && formRef.submitted }"></textarea>
+                        <textarea formControlName="CIFQ_Physical_Notes" class="form-text form-control" rows="3" cols="100" [ngClass]="{ 'is-invalid': fp.CIFQ_Physical_Notes.errors && formRef.submitted }"></textarea>
                     </div>
-                    <div *ngIf="fp.physicalText.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fp.physicalText.errors.required">Field is required
+                    <div *ngIf="fp.CIFQ_Physical_Notes.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fp.CIFQ_Physical_Notes.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -473,50 +473,50 @@
                 <label class="form-label">9. Quality of Life: General Well-being <br> "Rate the impact of your concussion on your overall sense of well-being and satisfaction with life."</label>
                 <div class="col-12 pl-4">
                     <div class="custom-control custom-radio"
-                        [ngClass]="{ 'is-invalid': fq.qualityMeasure.errors && formRef.submitted }">
+                        [ngClass]="{ 'is-invalid': fq.CIFQ_QOL_Score.errors && formRef.submitted }">
                         <div style="margin-right: 3rem;">
-                            <input id="quality0" type="radio" class="custom-control-input" value="0" name="qualityMeasure"
-                                formControlName="qualityMeasure">
+                            <input id="quality0" type="radio" class="custom-control-input" value="0" name="CIFQ_QOL_Score"
+                                formControlName="CIFQ_QOL_Score">
                             <label class="custom-control-label" for="quality0">0 = Never Experienced
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="quality01" type="radio" class="custom-control-input" value="1" name="qualityMeasure"
-                                formControlName="qualityMeasure">
+                            <input id="quality01" type="radio" class="custom-control-input" value="1" name="CIFQ_QOL_Score"
+                                formControlName="CIFQ_QOL_Score">
                             <label class="custom-control-label" for="quality01">1 = Mild
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="quality02" type="radio" class="custom-control-input" value="2" name="qualityMeasure"
-                                formControlName="qualityMeasure">
+                            <input id="quality02" type="radio" class="custom-control-input" value="2" name="CIFQ_QOL_Score"
+                                formControlName="CIFQ_QOL_Score">
                             <label class="custom-control-label" for="quality02">2 = Moderate
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="quality03" type="radio" class="custom-control-input" value="3" name="qualityMeasure"
-                                formControlName="qualityMeasure">
+                            <input id="quality03" type="radio" class="custom-control-input" value="3" name="CIFQ_QOL_Score"
+                                formControlName="CIFQ_QOL_Score">
                             <label class="custom-control-label" for="quality03">3 = Severe
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="quality0R" type="radio" class="custom-control-input" value="R" name="qualityMeasure"
-                                formControlName="qualityMeasure">
+                            <input id="quality0R" type="radio" class="custom-control-input" value="R" name="CIFQ_QOL_Score"
+                                formControlName="CIFQ_QOL_Score">
                             <label class="custom-control-label" for="quality0R">R = Resolved
                             </label>
                         </div>
                     </div>
-                    <div *ngIf="fq.qualityMeasure.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fq.qualityMeasure.errors.required">Field is required
+                    <div *ngIf="fq.CIFQ_QOL_Score.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fq.CIFQ_QOL_Score.errors.required">Field is required
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 pl-4">
                     <div class="">
-                        <textarea formControlName="qualityText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': fq.qualityText.errors && formRef.submitted }"></textarea>
+                        <textarea formControlName="CIFQ_QOL_Notes" class="form-text form-control" rows="3" cols="100" [ngClass]="{ 'is-invalid': fq.CIFQ_QOL_Notes.errors && formRef.submitted }"></textarea>
                     </div>
-                    <div *ngIf="fq.qualityText.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fq.qualityText.errors.required">Field is required
+                    <div *ngIf="fq.CIFQ_QOL_Notes.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fq.CIFQ_QOL_Notes.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -528,50 +528,50 @@
                 <label class="form-label">10. Future Outlook and Concerns <br> "Rate your level of concern about the long-term effects of your concussion and its impact on your future."</label>
                 <div class="col-12 pl-4">
                     <div class="custom-control custom-radio"
-                        [ngClass]="{ 'is-invalid': ffu.futureMeasure.errors && formRef.submitted }">
+                        [ngClass]="{ 'is-invalid': ffu.CIFQ_Future_Score.errors && formRef.submitted }">
                         <div style="margin-right: 3rem;">
-                            <input id="future0" type="radio" class="custom-control-input" value="0" name="futureMeasure"
-                                formControlName="futureMeasure">
+                            <input id="future0" type="radio" class="custom-control-input" value="0" name="CIFQ_Future_Score"
+                                formControlName="CIFQ_Future_Score">
                             <label class="custom-control-label" for="future0">0 = Never Experienced
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="future01" type="radio" class="custom-control-input" value="1" name="futureMeasure"
-                                formControlName="futureMeasure">
+                            <input id="future01" type="radio" class="custom-control-input" value="1" name="CIFQ_Future_Score"
+                                formControlName="CIFQ_Future_Score">
                             <label class="custom-control-label" for="future01">1 = Mild
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="future02" type="radio" class="custom-control-input" value="2" name="futureMeasure"
-                                formControlName="futureMeasure">
+                            <input id="future02" type="radio" class="custom-control-input" value="2" name="CIFQ_Future_Score"
+                                formControlName="CIFQ_Future_Score">
                             <label class="custom-control-label" for="future02">2 = Moderate
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="future03" type="radio" class="custom-control-input" value="3" name="futureMeasure"
-                                formControlName="futureMeasure">
+                            <input id="future03" type="radio" class="custom-control-input" value="3" name="CIFQ_Future_Score"
+                                formControlName="CIFQ_Future_Score">
                             <label class="custom-control-label" for="future03">3 = Severe
                             </label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="future0R" type="radio" class="custom-control-input" value="R" name="futureMeasure"
-                                formControlName="futureMeasure">
+                            <input id="future0R" type="radio" class="custom-control-input" value="R" name="CIFQ_Future_Score"
+                                formControlName="CIFQ_Future_Score">
                             <label class="custom-control-label" for="future0R">R = Resolved
                             </label>
                         </div>
                     </div>
-                    <div *ngIf="ffu.futureMeasure.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="ffu.futureMeasure.errors.required">Field is required
+                    <div *ngIf="ffu.CIFQ_Future_Score.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="ffu.CIFQ_Future_Score.errors.required">Field is required
                         </div>
                     </div>
                 </div>
 
                 <div class="col-12 pl-4">
                     <div class="">
-                        <textarea formControlName="futureText" class="form-text" rows="3" cols="100" [ngClass]="{ 'is-invalid': ffu.futureText.errors && formRef.submitted }"></textarea>
+                        <textarea formControlName="CIFQ_Future_Notes" class="form-text form-control" rows="3" cols="100" [ngClass]="{ 'is-invalid': ffu.CIFQ_Future_Notes.errors && formRef.submitted }"></textarea>
                     </div>
-                    <div *ngIf="ffu.futureText.errors && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="ffu.futureText.errors.required">Field is required
+                    <div *ngIf="ffu.CIFQ_Future_Notes.errors && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="ffu.CIFQ_Future_Notes.errors.required">Field is required
                         </div>
                     </div>
                 </div>
@@ -586,7 +586,7 @@
                 <button class="btn btn-warning btn-can-size" (click)="cancelPatient()" >Cancel</button>
               </div>
               <div class="col-auto">
-                <button class="button btn-primary btn-co-size mr-2" cdkStepperPrevious>&#8592; Previous</button>
+                <button class="btn btn-primary btn-co-size mr-2" cdkStepperPrevious>&#8592; Previous</button>
                 <button class="btn btn-primary btn-co-size" (click)="stepThreeSubmit()" cdkStepperNext>Next &#8594;</button>
               </div>
             </div>

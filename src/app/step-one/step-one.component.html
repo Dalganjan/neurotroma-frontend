@@ -3,16 +3,15 @@
 </div>
 <section class="container patient_box">
     <div class="patient_forms_heading text-left mb-3">Motor Vehicle Accident Details </div>
-    <form [formGroup]="stepOneForm" class="form-text text-left" autocomplete="off"
-        novalidate #formRef="ngForm">
+    <form [formGroup]="stepOneForm" class="form-text text-left" autocomplete="off" novalidate #formRef="ngForm">
 
         <div class="form-row mb-3">
             <label class="form-label">1. Date of Incident:</label>
             <div class="col-12 pl-4">
-                <input type="date" formControlName="dateOfIncident" class="form-control" style="width: 14rem"
-                    [ngClass]="{ 'is-invalid': f.dateOfIncident.errors && formRef.submitted }" />
-                <div *ngIf="f.dateOfIncident.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.dateOfIncident.errors.required">Date of Incident is required
+                <input type="date" formControlName="Intro_DateOf_Incident" class="form-control" style="width: 14rem"
+                    [ngClass]="{ 'is-invalid': f.Intro_DateOf_Incident.errors && formRef.submitted }" />
+                <div *ngIf="f.Intro_DateOf_Incident.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Intro_DateOf_Incident.errors.required">Date of Incident is required
                     </div>
                 </div>
             </div>
@@ -23,25 +22,25 @@
                 accident?</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.seatBeltUsage.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Intro_Seatbelt.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="yes" type="radio" class="custom-control-input" value="yes" name="seatBeltUsage"
-                            formControlName="seatBeltUsage">
+                        <input id="yes" type="radio" class="custom-control-input" value="yes" name="Intro_Seatbelt"
+                            formControlName="Intro_Seatbelt">
                         <label class="custom-control-label" for="yes">Yes</label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="no" type="radio" class="custom-control-input" value="no" name="seatBeltUsage"
-                            formControlName="seatBeltUsage">
+                        <input id="no" type="radio" class="custom-control-input" value="no" name="Intro_Seatbelt"
+                            formControlName="Intro_Seatbelt">
                         <label class="custom-control-label" for="no">No</label>
                     </div>
                     <div>
-                        <input id="unsure" type="radio" class="custom-control-input" value="unsure" name="seatBeltUsage"
-                            formControlName="seatBeltUsage">
+                        <input id="unsure" type="radio" class="custom-control-input" value="unsure"
+                            name="Intro_Seatbelt" formControlName="Intro_Seatbelt">
                         <label class="custom-control-label" for="unsure">Unsure</label>
                     </div>
                 </div>
-                <div *ngIf="f.seatBeltUsage.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.seatBeltUsage.errors.required">Seat Belt Usage is required
+                <div *ngIf="f.Intro_Seatbelt.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Intro_Seatbelt.errors.required">Seat Belt Usage is required
                     </div>
                 </div>
             </div>
@@ -51,25 +50,25 @@
             <label class="form-label">3. Airbag Deployment: Did the airbags deploy during the accident?</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.airbagDeployment.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Intro_Airbags.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="ayes" type="radio" class="custom-control-input" value="yes" name="airbagDeployment"
-                            formControlName="airbagDeployment">
+                        <input id="ayes" type="radio" class="custom-control-input" value="yes" name="Intro_Airbags"
+                            formControlName="Intro_Airbags">
                         <label class="custom-control-label" for="ayes">Yes</label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="ano" type="radio" class="custom-control-input" value="no" name="airbagDeployment"
-                            formControlName="airbagDeployment">
+                        <input id="ano" type="radio" class="custom-control-input" value="no" name="Intro_Airbags"
+                            formControlName="Intro_Airbags">
                         <label class="custom-control-label" for="ano">No</label>
                     </div>
                     <div>
                         <input id="aunsure" type="radio" class="custom-control-input" value="unsure"
-                            name="airbagDeployment" formControlName="airbagDeployment">
+                            name="Intro_Airbags" formControlName="Intro_Airbags">
                         <label class="custom-control-label" for="aunsure">Unsure</label>
                     </div>
                 </div>
-                <div *ngIf="f.airbagDeployment.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.airbagDeployment.errors.required">Air bag Deployment is
+                <div *ngIf="f.Intro_Airbags.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Intro_Airbags.errors.required">Air bag Deployment is
                         required</div>
                 </div>
             </div>
@@ -80,25 +79,25 @@
                 <label class="form-label">4. Head Impact: Did you hit your head during the accident?</label>
                 <div class="col-12 pl-4">
                     <div class="custom-control custom-radio"
-                        [ngClass]="{ 'is-invalid': fh.isHeadImpacted.errors && formRef.submitted }">
+                        [ngClass]="{ 'is-invalid': fh.Intro_Head_Impact.errors && formRef.submitted }">
                         <div style="margin-right: 3rem;">
-                            <input id="hyes" type="radio" class="custom-control-input" value="yes" name="isHeadImpacted"
-                                formControlName="isHeadImpacted">
+                            <input id="hyes" type="radio" class="custom-control-input" value="yes"
+                                name="Intro_Head_Impact" formControlName="Intro_Head_Impact">
                             <label class="custom-control-label" for="hyes">Yes</label>
                         </div>
                         <div style="margin-right: 3rem;">
-                            <input id="hno" type="radio" class="custom-control-input" value="no" name="isHeadImpacted"
-                                formControlName="isHeadImpacted">
+                            <input id="hno" type="radio" class="custom-control-input" value="no"
+                                name="Intro_Head_Impact" formControlName="Intro_Head_Impact">
                             <label class="custom-control-label" for="hno">No</label>
                         </div>
                         <div>
                             <input id="hunsure" type="radio" class="custom-control-input" value="unsure"
-                                name="isHeadImpacted" formControlName="isHeadImpacted">
+                                name="Intro_Head_Impact" formControlName="Intro_Head_Impact">
                             <label class="custom-control-label" for="hunsure">Unsure</label>
                         </div>
                     </div>
-                    <div *ngIf="fh.isHeadImpacted.errors  && formRef.submitted" class="invalid-feedback">
-                        <div *ngIf="fh.isHeadImpacted.errors.required">Head
+                    <div *ngIf="fh.Intro_Head_Impact.errors  && formRef.submitted" class="invalid-feedback">
+                        <div *ngIf="fh.Intro_Head_Impact.errors.required">Head
                             Impacted field is
                             required</div>
                     </div>
@@ -109,25 +108,25 @@
                 <label class="form-label">5. If yes, where did you hit your head? (Select all that apply)</label>
                 <div class="col-12">
                     <div class="custom-radio pl-4"
-                        [ngClass]="{ 'is-invalid': fh.headImpactPosition.errors && formRef.submitted }">
+                        [ngClass]="{ 'is-invalid': fh.Intro_HeadInjury_Location.errors && formRef.submitted }">
                         <div style="margin-right: 3rem;">
                             <input id="steering" type="radio" class="custom-control-input" value="steering"
-                                name="headImpactPosition" formControlName="headImpactPosition">
+                                name="Intro_HeadInjury_Location" formControlName="Intro_HeadInjury_Location">
                             <label class="custom-control-label" for="steering">On the steering wheel</label>
                         </div>
                         <div style="margin-right: 3rem;">
                             <input id="windshield" type="radio" class="custom-control-input" value="windshield"
-                                name="headImpactPosition" formControlName="headImpactPosition">
+                                name="Intro_HeadInjury_Location" formControlName="Intro_HeadInjury_Location">
                             <label class="custom-control-label" for="windshield">On the windshield</label>
                         </div>
                         <div style="margin-right: 3rem;">
                             <input id="headrest" type="radio" class="custom-control-input" value="headrest"
-                                name="headImpactPosition" formControlName="headImpactPosition">
+                                name="Intro_HeadInjury_Location" formControlName="Intro_HeadInjury_Location">
                             <label class="custom-control-label" for="headrest">On the headrest</label>
                         </div>
                         <div>
                             <input id="other" type="radio" class="custom-control-input" value="other"
-                                name="headImpactPosition" formControlName="headImpactPosition">
+                                name="Intro_HeadInjury_Location" formControlName="Intro_HeadInjury_Location">
                             <label class="custom-control-label" for="other">Other</label>
                         </div>
                     </div>
@@ -144,25 +143,25 @@
                     <label class="form-label">a. Was the windshield cracked or shattered?</label>
                     <div class="col-12">
                         <div class="custom-control custom-radio"
-                            [ngClass]="{ 'is-invalid': fv.windSheild.errors && formRef.submitted }">
+                            [ngClass]="{ 'is-invalid': fv.Intro_Windshield.errors && formRef.submitted }">
                             <div style="margin-right: 3rem;">
-                                <input id="wayes" type="radio" class="custom-control-input" value="yes" name="windSheild"
-                                    formControlName="windSheild">
+                                <input id="wayes" type="radio" class="custom-control-input" value="yes"
+                                    name="Intro_Windshield" formControlName="Intro_Windshield">
                                 <label class="custom-control-label" for="wayes">Yes</label>
                             </div>
                             <div style="margin-right: 3rem;">
-                                <input id="wano" type="radio" class="custom-control-input" value="no" name="windSheild"
-                                    formControlName="windSheild">
+                                <input id="wano" type="radio" class="custom-control-input" value="no"
+                                    name="Intro_Windshield" formControlName="Intro_Windshield">
                                 <label class="custom-control-label" for="wano">No</label>
                             </div>
                             <div>
-                                <input id="waunsure" type="radio" class="custom-control-input" value="unsure" name="windSheild"
-                                    formControlName="windSheild">
+                                <input id="waunsure" type="radio" class="custom-control-input" value="unsure"
+                                    name="Intro_Windshield" formControlName="Intro_Windshield">
                                 <label class="custom-control-label" for="waunsure">Unsure</label>
                             </div>
                         </div>
-                        <div *ngIf="fv.windSheild.errors && formRef.submitted" class="invalid-feedback">
-                            <div *ngIf="fv.windSheild.errors.required">
+                        <div *ngIf="fv.Intro_Windshield.errors && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="fv.Intro_Windshield.errors.required">
                                 Field is
                                 required</div>
                         </div>
@@ -173,25 +172,25 @@
                     <label class="form-label">b. Were any of the windows broken?</label>
                     <div class="col-12">
                         <div class="custom-control custom-radio"
-                            [ngClass]="{ 'is-invalid': fv.windBroken.errors && formRef.submitted }">
+                            [ngClass]="{ 'is-invalid': fv.Intro_Windows.errors && formRef.submitted }">
                             <div style="margin-right: 3rem;">
-                                <input id="wbyes" type="radio" class="custom-control-input" value="yes" name="windBroken"
-                                    formControlName="windBroken">
+                                <input id="wbyes" type="radio" class="custom-control-input" value="yes"
+                                    name="Intro_Windows" formControlName="Intro_Windows">
                                 <label class="custom-control-label" for="wbyes">Yes</label>
                             </div>
                             <div style="margin-right: 3rem;">
-                                <input id="wbno" type="radio" class="custom-control-input" value="no" name="windBroken"
-                                    formControlName="windBroken">
+                                <input id="wbno" type="radio" class="custom-control-input" value="no"
+                                    name="Intro_Windows" formControlName="Intro_Windows">
                                 <label class="custom-control-label" for="wbno">No</label>
                             </div>
                             <div>
-                                <input id="wbunsure" type="radio" class="custom-control-input" value="unsure" name="windBroken"
-                                    formControlName="windBroken">
+                                <input id="wbunsure" type="radio" class="custom-control-input" value="unsure"
+                                    name="Intro_Windows" formControlName="Intro_Windows">
                                 <label class="custom-control-label" for="wbunsure">Unsure</label>
                             </div>
                         </div>
-                        <div *ngIf="fv.windBroken.errors && formRef.submitted" class="invalid-feedback">
-                            <div *ngIf="fv.windBroken.errors.required">
+                        <div *ngIf="fv.Intro_Windows.errors && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="fv.Intro_Windows.errors.required">
                                 Field is
                                 required</div>
                         </div>
@@ -201,25 +200,25 @@
                     <label class="form-label">c. Was the car totaled?</label>
                     <div class="col-12">
                         <div class="custom-control custom-radio"
-                            [ngClass]="{ 'is-invalid': fv.carTotaled.errors && formRef.submitted }">
+                            [ngClass]="{ 'is-invalid': fv.Intro_Totaled.errors && formRef.submitted }">
                             <div style="margin-right: 3rem;">
-                                <input id="wcyes" type="radio" class="custom-control-input" value="yes" name="carTotaled"
-                                    formControlName="carTotaled">
+                                <input id="wcyes" type="radio" class="custom-control-input" value="yes"
+                                    name="Intro_Totaled" formControlName="Intro_Totaled">
                                 <label class="custom-control-label" for="wcyes">Yes</label>
                             </div>
                             <div style="margin-right: 3rem;">
-                                <input id="wcno" type="radio" class="custom-control-input" value="no" name="carTotaled"
-                                    formControlName="carTotaled">
+                                <input id="wcno" type="radio" class="custom-control-input" value="no"
+                                    name="Intro_Totaled" formControlName="Intro_Totaled">
                                 <label class="custom-control-label" for="wcno">No</label>
                             </div>
                             <div>
-                                <input id="wcunsure" type="radio" class="custom-control-input" value="unsure" name="carTotaled"
-                                    formControlName="carTotaled">
+                                <input id="wcunsure" type="radio" class="custom-control-input" value="unsure"
+                                    name="Intro_Totaled" formControlName="Intro_Totaled">
                                 <label class="custom-control-label" for="wcunsure">Unsure</label>
                             </div>
                         </div>
-                        <div *ngIf="fv.carTotaled.errors && formRef.submitted" class="invalid-feedback">
-                            <div *ngIf="fv.carTotaled.errors.required">
+                        <div *ngIf="fv.Intro_Totaled.errors && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="fv.Intro_Totaled.errors.required">
                                 Field is
                                 required</div>
                         </div>
@@ -236,25 +235,160 @@
                     <label class="form-label">a. Did you experience any loss of consciousness?</label>
                     <div class="col-12">
                         <div class="custom-control custom-radio"
-                            [ngClass]="{ 'is-invalid': fc.concussion.errors?.['required'] && formRef.submitted }">
+                            [ngClass]="{ 'is-invalid': fc.Intro_LossOf_Conciousness.errors?.['required'] && formRef.submitted }">
                             <div style="margin-right: 3rem;">
-                                <input id="cayes" type="radio" class="custom-control-input" value="yes" name="concussion"
-                                    formControlName="concussion">
+                                <input id="cayes" type="radio" class="custom-control-input" value="yes"
+                                    name="Intro_LossOf_Conciousness" formControlName="Intro_LossOf_Conciousness">
                                 <label class="custom-control-label" for="cayes">Yes</label>
                             </div>
                             <div style="margin-right: 3rem;">
-                                <input id="cano" type="radio" class="custom-control-input" value="no" name="concussion"
-                                    formControlName="concussion">
+                                <input id="cano" type="radio" class="custom-control-input" value="no"
+                                    name="Intro_LossOf_Conciousness" formControlName="Intro_LossOf_Conciousness">
                                 <label class="custom-control-label" for="cano">No</label>
                             </div>
                             <div>
-                                <input id="caunsure" type="radio" class="custom-control-input" value="unsure" name="concussion"
-                                    formControlName="concussion">
+                                <input id="caunsure" type="radio" class="custom-control-input" value="unsure"
+                                    name="Intro_LossOf_Conciousness" formControlName="Intro_LossOf_Conciousness">
                                 <label class="custom-control-label" for="caunsure">Unsure</label>
                             </div>
                         </div>
-                        <div *ngIf="fc.concussion.errors?.['required'] && formRef.submitted" class="invalid-feedback">
-                            <div *ngIf="fc.concussion.errors?.['required']">
+                        <div *ngIf="fc.Intro_LossOf_Conciousness.errors?.['required'] && formRef.submitted"
+                            class="invalid-feedback">
+                            <div *ngIf="fc.Intro_LossOf_Conciousness.errors?.['required']">
+                                Field is
+                                required</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pl-4">
+                    <div class="mb-3">
+                        <label class="form-label">i. If yes, how long did the loss of consciousness last?</label>
+                        <div style="margin-right: 3rem;">
+                            <input id="cbyes" type="text" class="form-text form-control" style="width: 14rem"
+                                name="Intro_LossOf_Conciousness_Time" formControlName="Intro_LossOf_Conciousness_Time">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">b. Did you experience any loss of memory (amnesia)?</label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio"
+                            [ngClass]="{ 'is-invalid': fc.Intro_LossOf_Memory.errors && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="ccyes" type="radio" class="custom-control-input" value="yes"
+                                    name="Intro_LossOf_Memory" formControlName="Intro_LossOf_Memory">
+                                <label class="custom-control-label" for="ccyes">Yes</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="ccno" type="radio" class="custom-control-input" value="no"
+                                    name="Intro_LossOf_Memory" formControlName="Intro_LossOf_Memory">
+                                <label class="custom-control-label" for="ccno">No</label>
+                            </div>
+                            <div>
+                                <input id="ccunsure" type="radio" class="custom-control-input" value="unsure"
+                                    name="Intro_LossOf_Memory" formControlName="Intro_LossOf_Memory">
+                                <label class="custom-control-label" for="ccunsure">Unsure</label>
+                            </div>
+                        </div>
+                        <div *ngIf="fc.Intro_LossOf_Memory.errors && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="fc.Intro_LossOf_Memory.errors.required">
+                                Field is
+                                required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">8. Did you have any seizures?</label>
+            <div class="col-12 pl-4">
+                <input type="text" formControlName="Intro_LossOf_Seizures" class="form-control" style="width: 14rem"
+                    [ngClass]="{ 'is-invalid': f.Intro_LossOf_Seizures.errors && formRef.submitted }" />
+                <div *ngIf="f.Intro_LossOf_Seizures.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Intro_LossOf_Seizures.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div formGroupName="mentalStatus">
+
+            <label>9. Altered Mental Status</label>
+            <div class="pl-4">
+                <div class="mb-3">
+                    <label class="form-label">a. At the scene of the accident, did you feel any altered mental status?
+                    </label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio"
+                            [ngClass]="{ 'is-invalid': fms.Intro_Altered_Mental_Status.errors?.['required'] && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="mscayes" type="radio" class="custom-control-input" value="yes"
+                                    name="Intro_Altered_Mental_Status" formControlName="Intro_Altered_Mental_Status">
+                                <label class="custom-control-label" for="mscayes">Yes</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="mscano" type="radio" class="custom-control-input" value="no"
+                                    name="Intro_Altered_Mental_Status" formControlName="Intro_Altered_Mental_Status">
+                                <label class="custom-control-label" for="mscano">No</label>
+                            </div>
+                            <div>
+                                <input id="mscaunsure" type="radio" class="custom-control-input" value="unsure"
+                                    name="Intro_Altered_Mental_Status" formControlName="Intro_Altered_Mental_Status">
+                                <label class="custom-control-label" for="mscaunsure">Unsure</label>
+                            </div>
+                        </div>
+                        <div *ngIf="fms.Intro_Altered_Mental_Status.errors?.['required'] && formRef.submitted"
+                            class="invalid-feedback">
+                            <div *ngIf="fms.Intro_Altered_Mental_Status.errors?.['required']">
+                                Field is
+                                required</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pl-4">
+                    <div class="mb-3">
+                        <label class="form-label">i. If yes, how would you describe it? </label>
+                        <div style="margin-right: 3rem;">
+                            <input id="mscbyes" type="text" class="form-text form-control" style="width: 14rem"
+                                name="Intro_Altered_Mental_Status_Description"
+                                formControlName="Intro_Altered_Mental_Status_Description">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div formGroupName="vehicleImpact">
+            <label>10. Vehicle Impact</label>
+            <div class="pl-4">
+                <div class="mb-3">
+                    <label class="form-label">a. From which direction was the vehicle struck?</label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio"
+                            [ngClass]="{ 'is-invalid': fvi.Intro_Direction_of_Accident.errors?.['required'] && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="vicayes" type="radio" class="custom-control-input" value="yes"
+                                    name="Intro_Direction_of_Accident" formControlName="Intro_Direction_of_Accident">
+                                <label class="custom-control-label" for="vicayes">Yes</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="vicano" type="radio" class="custom-control-input" value="no"
+                                    name="Intro_Direction_of_Accident" formControlName="Intro_Direction_of_Accident">
+                                <label class="custom-control-label" for="vicano">No</label>
+                            </div>
+                            <div>
+                                <input id="vicaunsure" type="radio" class="custom-control-input" value="unsure"
+                                    name="Intro_Direction_of_Accident" formControlName="Intro_Direction_of_Accident">
+                                <label class="custom-control-label" for="vicaunsure">Unsure</label>
+                            </div>
+                        </div>
+                        <div *ngIf="fvi.Intro_Direction_of_Accident.errors?.['required'] && formRef.submitted"
+                            class="invalid-feedback">
+                            <div *ngIf="fvi.Intro_Direction_of_Accident.errors?.['required']">
                                 Field is
                                 required</div>
                         </div>
@@ -262,56 +396,396 @@
                 </div>
 
                 <div class="mb-3">
-                    <label class="form-label">b. Were any of the windows broken?</label>
+                    <label class="form-label">b. Was there more than one impact to the vehicle?</label>
                     <div class="col-12">
                         <div class="custom-control custom-radio"
-                            [ngClass]="{ 'is-invalid': fc.windowBroken.errors && formRef.submitted }">
+                            [ngClass]="{ 'is-invalid': fvi.Intro_Multiple_Impacts.errors && formRef.submitted }">
                             <div style="margin-right: 3rem;">
-                                <input id="cbyes" type="radio" class="custom-control-input" value="yes" name="windowBroken"
-                                    formControlName="windowBroken">
-                                <label class="custom-control-label" for="cbyes">Yes</label>
+                                <input id="vicyes" type="radio" class="custom-control-input" value="yes"
+                                    name="Intro_Multiple_Impacts" formControlName="Intro_Multiple_Impacts">
+                                <label class="custom-control-label" for="vicyes">Yes</label>
                             </div>
                             <div style="margin-right: 3rem;">
-                                <input id="cbno" type="radio" class="custom-control-input" value="no" name="windowBroken"
-                                    formControlName="windowBroken">
-                                <label class="custom-control-label" for="cbno">No</label>
+                                <input id="vicno" type="radio" class="custom-control-input" value="no"
+                                    name="Intro_Multiple_Impacts" formControlName="Intro_Multiple_Impacts">
+                                <label class="custom-control-label" for="vicno">No</label>
                             </div>
                             <div>
-                                <input id="cbunsure" type="radio" class="custom-control-input" value="unsure" name="windowBroken"
-                                    formControlName="windowBroken">
-                                <label class="custom-control-label" for="cbunsure">Unsure</label>
+                                <input id="vicunsure" type="radio" class="custom-control-input" value="unsure"
+                                    name="Intro_Multiple_Impacts" formControlName="Intro_Multiple_Impacts">
+                                <label class="custom-control-label" for="vicunsure">Unsure</label>
                             </div>
                         </div>
-                        <div *ngIf="fc.windowBroken.errors && formRef.submitted" class="invalid-feedback">
-                            <div *ngIf="fc.windowBroken.errors.required">
+                        <div *ngIf="fvi.Intro_Multiple_Impacts.errors && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="fvi.Intro_Multiple_Impacts.errors.required">
+                                Field is
+                                required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div formGroupName="extrication">
+            <label>11. Extrication</label>
+            <div class="pl-4">
+                <div class="mb-3">
+                    <label class="form-label">a. Were you able to get out of the car by yourself
+                        (self-extricated)?</label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio"
+                            [ngClass]="{ 'is-invalid': fex.Intro_Self_Extraction.errors?.['required'] && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="excayes" type="radio" class="custom-control-input" value="yes"
+                                    name="Intro_Self_Extraction" formControlName="Intro_Self_Extraction">
+                                <label class="custom-control-label" for="excayes">Yes</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="excano" type="radio" class="custom-control-input" value="no"
+                                    name="Intro_Self_Extraction" formControlName="Intro_Self_Extraction">
+                                <label class="custom-control-label" for="excano">No</label>
+                            </div>
+                        </div>
+                        <div *ngIf="fex.Intro_Self_Extraction.errors?.['required'] && formRef.submitted"
+                            class="invalid-feedback">
+                            <div *ngIf="fex.Intro_Self_Extraction.errors?.['required']">
+                                Field is
+                                required</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">b. Were you extricated (removed) from the vehicle by EMS?</label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio"
+                            [ngClass]="{ 'is-invalid': fex.Intro_EMS_Extraction.errors && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="excyes" type="radio" class="custom-control-input" value="yes"
+                                    name="Intro_EMS_Extraction" formControlName="Intro_EMS_Extraction">
+                                <label class="custom-control-label" for="excyes">Yes</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="excno" type="radio" class="custom-control-input" value="no"
+                                    name="Intro_EMS_Extraction" formControlName="Intro_EMS_Extraction">
+                                <label class="custom-control-label" for="excno">No</label>
+                            </div>
+                        </div>
+                        <div *ngIf="fex.Intro_EMS_Extraction.errors && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="fex.Intro_EMS_Extraction.errors.required">
+                                Field is
+                                required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div formGroupName="medicalEvaluation">
+            <label>12. Post-Accident Medical Evaluation</label>
+            <div class="pl-4">
+                <div class="mb-3">
+                    <label class="form-label">a. Did you go to the emergency room after the accident? </label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio"
+                            [ngClass]="{ 'is-invalid': fme.Intro_EmergencyRoom.errors?.['required'] && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="mecayes" type="radio" class="custom-control-input" value="yes"
+                                    name="Intro_EmergencyRoom" formControlName="Intro_EmergencyRoom">
+                                <label class="custom-control-label" for="mecayes">Yes</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="mecano" type="radio" class="custom-control-input" value="no"
+                                    name="Intro_EmergencyRoom" formControlName="Intro_EmergencyRoom">
+                                <label class="custom-control-label" for="mecano">No</label>
+                            </div>
+                        </div>
+                        <div *ngIf="fme.Intro_EmergencyRoom.errors?.['required'] && formRef.submitted"
+                            class="invalid-feedback">
+                            <div *ngIf="fme.Intro_EmergencyRoom.errors?.['required']">
+                                Field is
+                                required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pl-4">
+                    <div class="mb-3">
+                        <label class="form-label">1. If yes, did you have a head CT scan or MRI scan of the brain?
+                        </label>
+                        <div class="col-12 pl-4">
+                            <input type="text" formControlName="Intro_EmergencyRoom_CT_MRI" class="form-control"
+                                style="width: 14rem" />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">2. If yes, do you know the results? </label>
+                        <div class="col-12 pl-4">
+                            <input type="text" formControlName="Intro_EmergencyRoom_CT_MRI_Results" class="form-control"
+                                style="width: 14rem" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div formGroupName="occupationHistory">
+            <label>13. Personal and Medical History/Occupation and Education</label>
+            <div class="pl-4">
+                <div class="mb-3">
+                    <label class="form-label">a. What is your occupation?</label>
+                    <div class="col-12 pl-4">
+                        <input type="text" formControlName="Intro_Occupation" class="form-control" style="width: 14rem"
+                            [ngClass]="{ 'is-invalid': foh.Intro_Occupation.errors && formRef.submitted }" />
+                        <div *ngIf="foh.Intro_Occupation.errors && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="foh.Intro_Occupation.errors.required">Field is required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">b. Have you had to miss work since the accident?</label>
+                    <div class="col-12 pl-4">
+                        <input type="text" formControlName="Intro_Occupation_Missed" class="form-control"
+                            style="width: 14rem"
+                            [ngClass]="{ 'is-invalid': foh.Intro_Occupation_Missed.errors && formRef.submitted }" />
+                        <div *ngIf="foh.Intro_Occupation_Missed.errors && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="foh.Intro_Occupation_Missed.errors.required">Field is required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">c. What is the highest level of education you have completed? </label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio" style="display: block;"
+                            [ngClass]="{ 'is-invalid': foh.Intro_Education.errors?.['required'] && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="ohcayehs" type="radio" class="custom-control-input"
+                                    value="Did not complete high school" name="Intro_Education"
+                                    formControlName="Intro_Education">
+                                <label class="custom-control-label" for="ohcayehs">Did not complete high school</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="ohcahs" type="radio" class="custom-control-input"
+                                    value="High school diploma or GED" name="Intro_Education"
+                                    formControlName="Intro_Education">
+                                <label class="custom-control-label" for="ohcahs">High school diploma or GED</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="ohcd" type="radio" class="custom-control-input" value="College degree"
+                                    name="Intro_Education" formControlName="Intro_Education">
+                                <label class="custom-control-label" for="ohcd">College degree</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="ohpt" type="radio" class="custom-control-input"
+                                    value="Postgraduate Training" name="Intro_Education"
+                                    formControlName="Intro_Education">
+                                <label class="custom-control-label" for="ohpt">Postgraduate Training</label>
+                            </div>
+                        </div>
+                        <div *ngIf="foh.Intro_Education.errors?.['required'] && formRef.submitted"
+                            class="invalid-feedback">
+                            <div *ngIf="foh.Intro_Education.errors?.['required']">
                                 Field is
                                 required</div>
                         </div>
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">c. Was the car totaled?</label>
-                    <div class="col-12">
-                        <div class="custom-control custom-radio"
-                            [ngClass]="{ 'is-invalid': fc.carrTotaled.errors && formRef.submitted }">
-                            <div style="margin-right: 3rem;">
-                                <input id="ccyes" type="radio" class="custom-control-input" value="yes" name="carrTotaled"
-                                    formControlName="carrTotaled">
-                                <label class="custom-control-label" for="ccyes">Yes</label>
-                            </div>
-                            <div style="margin-right: 3rem;">
-                                <input id="ccno" type="radio" class="custom-control-input" value="no" name="carrTotaled"
-                                    formControlName="carrTotaled">
-                                <label class="custom-control-label" for="ccno">No</label>
-                            </div>
-                            <div>
-                                <input id="ccunsure" type="radio" class="custom-control-input" value="unsure" name="carrTotaled"
-                                    formControlName="carrTotaled">
-                                <label class="custom-control-label" for="ccunsure">Unsure</label>
+                    <label class="form-label">c. Specify the degree: </label>
+                    <div class="col-12 pl-4">
+                        <input type="text" formControlName="Intro_Degree" class="form-control" style="width: 14rem"
+                            [ngClass]="{ 'is-invalid': foh.Intro_Degree.errors && formRef.submitted }" />
+                        <div *ngIf="foh.Intro_Degree.errors && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="foh.Intro_Degree.errors.required">Field is required
                             </div>
                         </div>
-                        <div *ngIf="fc.carrTotaled.errors && formRef.submitted" class="invalid-feedback">
-                            <div *ngIf="fc.carrTotaled.errors.required">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">14. Visual Aids:</label>
+            <div class="col-12 pl-4">
+                <div class="mb-3">
+                    <label class="form-label">a. Do you wear glasses or contacts? </label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio"
+                            [ngClass]="{ 'is-invalid': f.Intro_Vision.errors?.['required'] && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="visiony" type="radio" class="custom-control-input" value="yes"
+                                    name="Intro_Vision" formControlName="Intro_Vision">
+                                <label class="custom-control-label" for="visiony">Yes</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="visionn" type="radio" class="custom-control-input" value="no"
+                                    name="Intro_Vision" formControlName="Intro_Vision">
+                                <label class="custom-control-label" for="visionn">No</label>
+                            </div>
+                        </div>
+                        <div *ngIf="f.Intro_Vision.errors?.['required'] && formRef.submitted" class="invalid-feedback">
+                            <div *ngIf="f.Intro_Vision.errors?.['required']">
+                                Field is
+                                required</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div formGroupName="medicalHistory">
+            <div class="form-row mb-3">
+                <label class="form-label">15. Medical History:</label>
+                <div class="col-12 pl-4">
+                    <div class="mb-3">
+                        <label class="form-label">a. Do you have a history of seizures? </label>
+                        <div class="col-12">
+                            <div class="custom-control custom-radio"
+                                [ngClass]="{ 'is-invalid': fmh.Intro_History_Seizures.errors?.['required'] && formRef.submitted }">
+                                <div style="margin-right: 3rem;">
+                                    <input id="mhy" type="radio" class="custom-control-input" value="yes"
+                                        name="Intro_History_Seizures" formControlName="Intro_History_Seizures">
+                                    <label class="custom-control-label" for="mhy">Yes</label>
+                                </div>
+                                <div style="margin-right: 3rem;">
+                                    <input id="mhn" type="radio" class="custom-control-input" value="no"
+                                        name="Intro_History_Seizures" formControlName="Intro_History_Seizures">
+                                    <label class="custom-control-label" for="mhn">No</label>
+                                </div>
+                            </div>
+                            <div *ngIf="fmh.Intro_History_Seizures.errors?.['required'] && formRef.submitted"
+                                class="invalid-feedback">
+                                <div *ngIf="fmh.Intro_History_Seizures.errors?.['required']">
+                                    Field is
+                                    required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">b. Do you have a history of migraine headaches? </label>
+                        <div class="col-12">
+                            <div class="custom-control custom-radio"
+                                [ngClass]="{ 'is-invalid': fmh.Intro_History_Migraine.errors?.['required'] && formRef.submitted }">
+                                <div style="margin-right: 3rem;">
+                                    <input id="migy" type="radio" class="custom-control-input" value="yes"
+                                        name="Intro_History_Migraine" formControlName="Intro_History_Migraine">
+                                    <label class="custom-control-label" for="migy">Yes</label>
+                                </div>
+                                <div style="margin-right: 3rem;">
+                                    <input id="mign" type="radio" class="custom-control-input" value="no"
+                                        name="Intro_History_Migraine" formControlName="Intro_History_Migraine">
+                                    <label class="custom-control-label" for="mign">No</label>
+                                </div>
+                            </div>
+                            <div *ngIf="fmh.Intro_History_Migraine.errors?.['required'] && formRef.submitted"
+                                class="invalid-feedback">
+                                <div *ngIf="fmh.Intro_History_Migraine.errors?.['required']">
+                                    Field is
+                                    required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">c. Have you had any previous concussions? </label>
+                        <div class="col-12">
+                            <div class="custom-control custom-radio"
+                                [ngClass]="{ 'is-invalid': fmh.Intro_History_Concussions.errors?.['required'] && formRef.submitted }">
+                                <div style="margin-right: 3rem;">
+                                    <input id="mihcy" type="radio" class="custom-control-input" value="yes"
+                                        name="Intro_History_Concussions" formControlName="Intro_History_Concussions">
+                                    <label class="custom-control-label" for="mihcy">Yes</label>
+                                </div>
+                                <div style="margin-right: 3rem;">
+                                    <input id="mihcn" type="radio" class="custom-control-input" value="no"
+                                        name="Intro_History_Concussions" formControlName="Intro_History_Concussions">
+                                    <label class="custom-control-label" for="mihcn">No</label>
+                                </div>
+                            </div>
+                            <div *ngIf="fmh.Intro_History_Concussions.errors?.['required'] && formRef.submitted"
+                                class="invalid-feedback">
+                                <div *ngIf="fmh.Intro_History_Concussions.errors?.['required']">
+                                    Field is
+                                    required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">d. Do you have ADHD or learning difficulties? </label>
+                        <div class="col-12">
+                            <div class="custom-control custom-radio"
+                                [ngClass]="{ 'is-invalid': fmh.Intro_History_ADHD.errors?.['required'] && formRef.submitted }">
+                                <div style="margin-right: 3rem;">
+                                    <input id="adhdy" type="radio" class="custom-control-input" value="yes"
+                                        name="Intro_History_ADHD" formControlName="Intro_History_ADHD">
+                                    <label class="custom-control-label" for="adhdy">Yes</label>
+                                </div>
+                                <div style="margin-right: 3rem;">
+                                    <input id="adhdn" type="radio" class="custom-control-input" value="no"
+                                        name="Intro_History_ADHD" formControlName="Intro_History_ADHD">
+                                    <label class="custom-control-label" for="adhdn">No</label>
+                                </div>
+                            </div>
+                            <div *ngIf="fmh.Intro_History_ADHD.errors?.['required'] && formRef.submitted"
+                                class="invalid-feedback">
+                                <div *ngIf="fmh.Intro_History_ADHD.errors?.['required']">
+                                    Field is
+                                    required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">e. Do you experience motion sickness? </label>
+                        <div class="col-12">
+                            <div class="custom-control custom-radio"
+                                [ngClass]="{ 'is-invalid': fmh.Intro_History_Motion_Sickness.errors?.['required'] && formRef.submitted }">
+                                <div style="margin-right: 3rem;">
+                                    <input id="msy" type="radio" class="custom-control-input" value="yes"
+                                        name="Intro_History_Motion_Sickness"
+                                        formControlName="Intro_History_Motion_Sickness">
+                                    <label class="custom-control-label" for="msy">Yes</label>
+                                </div>
+                                <div style="margin-right: 3rem;">
+                                    <input id="msn" type="radio" class="custom-control-input" value="no"
+                                        name="Intro_History_Motion_Sickness"
+                                        formControlName="Intro_History_Motion_Sickness">
+                                    <label class="custom-control-label" for="msn">No</label>
+                                </div>
+                            </div>
+                            <div *ngIf="fmh.Intro_History_Motion_Sickness.errors?.['required'] && formRef.submitted"
+                                class="invalid-feedback">
+                                <div *ngIf="fmh.Intro_History_Motion_Sickness.errors?.['required']">
+                                    Field is
+                                    required</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">16. Rehabilitation:</label>
+            <div class="col-12 pl-4">
+                <div class="mb-3">
+                    <label class="form-label">a. Have you begun undergoing physical therapy since the injury?</label>
+                    <div class="col-12">
+                        <div class="custom-control custom-radio"
+                            [ngClass]="{ 'is-invalid': f.Intro_Rehab_PT.errors?.['required'] && formRef.submitted }">
+                            <div style="margin-right: 3rem;">
+                                <input id="rhy" type="radio" class="custom-control-input" value="yes"
+                                    name="Intro_Rehab_PT" formControlName="Intro_Rehab_PT">
+                                <label class="custom-control-label" for="rhy">Yes</label>
+                            </div>
+                            <div style="margin-right: 3rem;">
+                                <input id="rhn" type="radio" class="custom-control-input" value="no"
+                                    name="Intro_Rehab_PT" formControlName="Intro_Rehab_PT">
+                                <label class="custom-control-label" for="rhn">No</label>
+                            </div>
+                        </div>
+                        <div *ngIf="f.Intro_Rehab_PT.errors?.['required'] && formRef.submitted"
+                            class="invalid-feedback">
+                            <div *ngIf="f.Intro_Rehab_PT.errors?.['required']">
                                 Field is
                                 required</div>
                         </div>
@@ -324,10 +798,11 @@
 
         <div class="form-row">
             <div class="form-group col-4">
-                <button class="btn btn-warning btn-can-size" (click)="cancelPatient()" >Cancel</button>
+                <button class="btn btn-warning btn-can-size" (click)="cancelPatient()">Cancel</button>
             </div>
             <div class="form-group col-8 text-right">
-                <button class="btn btn-primary btn-co-size" (click)="stepOneSubmit()" cdkStepperNext>Next &#8594;</button>
+                <button class="btn btn-primary btn-co-size" (click)="stepOneSubmit()" cdkStepperNext>Next
+                    &#8594;</button>
             </div>
         </div>
 

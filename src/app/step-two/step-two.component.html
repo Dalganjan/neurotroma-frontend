@@ -26,40 +26,40 @@
             <label class="form-label">1. Dizziness</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.dizziness.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Dizziness.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="d0" type="radio" class="custom-control-input" value="0" name="dizziness"
-                            formControlName="dizziness">
+                        <input id="d0" type="radio" class="custom-control-input" value="0" name="Stanford_Dizziness"
+                            formControlName="Stanford_Dizziness">
                         <label class="custom-control-label" for="d0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="d1" type="radio" class="custom-control-input" value="1" name="dizziness"
-                            formControlName="dizziness">
+                        <input id="d1" type="radio" class="custom-control-input" value="1" name="Stanford_Dizziness"
+                            formControlName="Stanford_Dizziness">
                         <label class="custom-control-label" for="d1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="d2" type="radio" class="custom-control-input" value="2" name="dizziness"
-                            formControlName="dizziness">
+                        <input id="d2" type="radio" class="custom-control-input" value="2" name="Stanford_Dizziness"
+                            formControlName="Stanford_Dizziness">
                         <label class="custom-control-label" for="d2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="d3" type="radio" class="custom-control-input" value="3" name="dizziness"
-                            formControlName="dizziness">
+                        <input id="d3" type="radio" class="custom-control-input" value="3" name="Stanford_Dizziness"
+                            formControlName="Stanford_Dizziness">
                         <label class="custom-control-label" for="d3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="dR" type="radio" class="custom-control-input" value="R" name="dizziness"
-                            formControlName="dizziness">
+                        <input id="dR" type="radio" class="custom-control-input" value="R" name="Stanford_Dizziness"
+                            formControlName="Stanford_Dizziness">
                         <label class="custom-control-label" for="dR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.dizziness.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.dizziness.errors.required">Field is required
+                <div *ngIf="f.Stanford_Dizziness.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Dizziness.errors.required">Field is required
                     </div>
                 </div>
             </div>
@@ -69,40 +69,40 @@
             <label class="form-label">2. Headaches</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.headaches.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Headache.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="h0" type="radio" class="custom-control-input" value="0" name="headaches"
-                            formControlName="headaches">
+                        <input id="h0" type="radio" class="custom-control-input" value="0" name="Stanford_Headache"
+                            formControlName="Stanford_Headache">
                         <label class="custom-control-label" for="h0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="h1" type="radio" class="custom-control-input" value="1" name="headaches"
-                            formControlName="headaches">
+                        <input id="h1" type="radio" class="custom-control-input" value="1" name="Stanford_Headache"
+                            formControlName="Stanford_Headache">
                         <label class="custom-control-label" for="h1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="h2" type="radio" class="custom-control-input" value="2" name="headaches"
-                            formControlName="headaches">
+                        <input id="h2" type="radio" class="custom-control-input" value="2" name="Stanford_Headache"
+                            formControlName="Stanford_Headache">
                         <label class="custom-control-label" for="h2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="h3" type="radio" class="custom-control-input" value="3" name="headaches"
-                            formControlName="headaches">
+                        <input id="h3" type="radio" class="custom-control-input" value="3" name="Stanford_Headache"
+                            formControlName="Stanford_Headache">
                         <label class="custom-control-label" for="h3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="hR" type="radio" class="custom-control-input" value="R" name="headaches"
-                            formControlName="headaches">
+                        <input id="hR" type="radio" class="custom-control-input" value="R" name="Stanford_Headache"
+                            formControlName="Stanford_Headache">
                         <label class="custom-control-label" for="hR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.headaches.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.headaches.errors.required">Field is required
+                <div *ngIf="f.Stanford_Headache.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Headache.errors.required">Field is required
                     </div>
                 </div>
             </div>
@@ -112,40 +112,40 @@
             <label class="form-label">3. Hearing Changes</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.hearingChanges.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Hearing.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="he0" type="radio" class="custom-control-input" value="0" name="hearingChanges"
-                            formControlName="hearingChanges">
+                        <input id="he0" type="radio" class="custom-control-input" value="0" name="Stanford_Hearing"
+                            formControlName="Stanford_Hearing">
                         <label class="custom-control-label" for="he0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="he1" type="radio" class="custom-control-input" value="1" name="hearingChanges"
-                            formControlName="hearingChanges">
+                        <input id="he1" type="radio" class="custom-control-input" value="1" name="Stanford_Hearing"
+                            formControlName="Stanford_Hearing">
                         <label class="custom-control-label" for="he1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="he2" type="radio" class="custom-control-input" value="2" name="hearingChanges"
-                            formControlName="hearingChanges">
+                        <input id="he2" type="radio" class="custom-control-input" value="2" name="Stanford_Hearing"
+                            formControlName="Stanford_Hearing">
                         <label class="custom-control-label" for="he2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="he3" type="radio" class="custom-control-input" value="3" name="hearingChanges"
-                            formControlName="hearingChanges">
+                        <input id="he3" type="radio" class="custom-control-input" value="3" name="Stanford_Hearing"
+                            formControlName="Stanford_Hearing">
                         <label class="custom-control-label" for="he3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="heR" type="radio" class="custom-control-input" value="R" name="hearingChanges"
-                            formControlName="hearingChanges">
+                        <input id="heR" type="radio" class="custom-control-input" value="R" name="Stanford_Hearing"
+                            formControlName="Stanford_Hearing">
                         <label class="custom-control-label" for="heR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.hearingChanges.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.hearingChanges.errors.required">Field is required
+                <div *ngIf="f.Stanford_Hearing.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Hearing.errors.required">Field is required
                     </div>
                 </div>
             </div>
@@ -155,40 +155,40 @@
             <label class="form-label">4. Vision Changes</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.visionChanges.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Vision.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="vi0" type="radio" class="custom-control-input" value="0" name="visionChanges"
-                            formControlName="visionChanges">
+                        <input id="vi0" type="radio" class="custom-control-input" value="0" name="Stanford_Vision"
+                            formControlName="Stanford_Vision">
                         <label class="custom-control-label" for="vi0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="vi1" type="radio" class="custom-control-input" value="1" name="visionChanges"
-                            formControlName="visionChanges">
+                        <input id="vi1" type="radio" class="custom-control-input" value="1" name="Stanford_Vision"
+                            formControlName="Stanford_Vision">
                         <label class="custom-control-label" for="vi1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="vi2" type="radio" class="custom-control-input" value="2" name="visionChanges"
-                            formControlName="visionChanges">
+                        <input id="vi2" type="radio" class="custom-control-input" value="2" name="Stanford_Vision"
+                            formControlName="Stanford_Vision">
                         <label class="custom-control-label" for="vi2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="vi3" type="radio" class="custom-control-input" value="3" name="visionChanges"
-                            formControlName="visionChanges">
+                        <input id="vi3" type="radio" class="custom-control-input" value="3" name="Stanford_Vision"
+                            formControlName="Stanford_Vision">
                         <label class="custom-control-label" for="vi3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="viR" type="radio" class="custom-control-input" value="R" name="visionChanges"
-                            formControlName="visionChanges">
+                        <input id="viR" type="radio" class="custom-control-input" value="R" name="Stanford_Vision"
+                            formControlName="Stanford_Vision">
                         <label class="custom-control-label" for="viR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.visionChanges.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.visionChanges.errors.required">Field is required
+                <div *ngIf="f.Stanford_Vision.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Vision.errors.required">Field is required
                     </div>
                 </div>
             </div>
@@ -198,40 +198,40 @@
             <label class="form-label">5. Balance Changes</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.balanceChanges.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Balance.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="ba0" type="radio" class="custom-control-input" value="0" name="balanceChanges"
-                            formControlName="balanceChanges">
+                        <input id="ba0" type="radio" class="custom-control-input" value="0" name="Stanford_Balance"
+                            formControlName="Stanford_Balance">
                         <label class="custom-control-label" for="ba0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="ba1" type="radio" class="custom-control-input" value="1" name="balanceChanges"
-                            formControlName="balanceChanges">
+                        <input id="ba1" type="radio" class="custom-control-input" value="1" name="Stanford_Balance"
+                            formControlName="Stanford_Balance">
                         <label class="custom-control-label" for="ba1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="ba2" type="radio" class="custom-control-input" value="2" name="balanceChanges"
-                            formControlName="balanceChanges">
+                        <input id="ba2" type="radio" class="custom-control-input" value="2" name="Stanford_Balance"
+                            formControlName="Stanford_Balance">
                         <label class="custom-control-label" for="ba2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="ba3" type="radio" class="custom-control-input" value="3" name="balanceChanges"
-                            formControlName="balanceChanges">
+                        <input id="ba3" type="radio" class="custom-control-input" value="3" name="Stanford_Balance"
+                            formControlName="Stanford_Balance">
                         <label class="custom-control-label" for="ba3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="baR" type="radio" class="custom-control-input" value="R" name="balanceChanges"
-                            formControlName="balanceChanges">
+                        <input id="baR" type="radio" class="custom-control-input" value="R" name="Stanford_Balance"
+                            formControlName="Stanford_Balance">
                         <label class="custom-control-label" for="baR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.balanceChanges.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.balanceChanges.errors.required">Field is required
+                <div *ngIf="f.Stanford_Balance.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Balance.errors.required">Field is required
                     </div>
                 </div>
             </div>
@@ -241,40 +241,40 @@
             <label class="form-label">6. Nausea and/or Vomiting</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.nauseaOrVomiting.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Nausea.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="nav0" type="radio" class="custom-control-input" value="0" name="nauseaOrVomiting"
-                            formControlName="nauseaOrVomiting">
+                        <input id="nav0" type="radio" class="custom-control-input" value="0" name="Stanford_Nausea"
+                            formControlName="Stanford_Nausea">
                         <label class="custom-control-label" for="nav0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="nav1" type="radio" class="custom-control-input" value="1" name="nauseaOrVomiting"
-                            formControlName="nauseaOrVomiting">
+                        <input id="nav1" type="radio" class="custom-control-input" value="1" name="Stanford_Nausea"
+                            formControlName="Stanford_Nausea">
                         <label class="custom-control-label" for="nav1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="nav2" type="radio" class="custom-control-input" value="2" name="nauseaOrVomiting"
-                            formControlName="nauseaOrVomiting">
+                        <input id="nav2" type="radio" class="custom-control-input" value="2" name="Stanford_Nausea"
+                            formControlName="Stanford_Nausea">
                         <label class="custom-control-label" for="nav2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="nav3" type="radio" class="custom-control-input" value="3" name="nauseaOrVomiting"
-                            formControlName="nauseaOrVomiting">
+                        <input id="nav3" type="radio" class="custom-control-input" value="3" name="Stanford_Nausea"
+                            formControlName="Stanford_Nausea">
                         <label class="custom-control-label" for="nav3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="navR" type="radio" class="custom-control-input" value="R" name="nauseaOrVomiting"
-                            formControlName="nauseaOrVomiting">
+                        <input id="navR" type="radio" class="custom-control-input" value="R" name="Stanford_Nausea"
+                            formControlName="Stanford_Nausea">
                         <label class="custom-control-label" for="navR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.nauseaOrVomiting.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.nauseaOrVomiting.errors.required">Field is required
+                <div *ngIf="f.Stanford_Nausea.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Nausea.errors.required">Field is required
                     </div>
                 </div>
             </div>
@@ -284,513 +284,427 @@
             <label class="form-label">7. Light sensitivity, bothered by</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.lightSensitivity.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Lights.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="ls0" type="radio" class="custom-control-input" value="0" name="lightSensitivity"
-                            formControlName="lightSensitivity">
+                        <input id="ls0" type="radio" class="custom-control-input" value="0" name="Stanford_Lights"
+                            formControlName="Stanford_Lights">
                         <label class="custom-control-label" for="ls0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="ls1" type="radio" class="custom-control-input" value="1" name="lightSensitivity"
-                            formControlName="lightSensitivity">
+                        <input id="ls1" type="radio" class="custom-control-input" value="1" name="Stanford_Lights"
+                            formControlName="Stanford_Lights">
                         <label class="custom-control-label" for="ls1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="ls2" type="radio" class="custom-control-input" value="2" name="lightSensitivity"
-                            formControlName="lightSensitivity">
+                        <input id="ls2" type="radio" class="custom-control-input" value="2" name="Stanford_Lights"
+                            formControlName="Stanford_Lights">
                         <label class="custom-control-label" for="ls2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="nav3" type="radio" class="custom-control-input" value="3" name="lightSensitivity"
-                            formControlName="lightSensitivity">
+                        <input id="ls3" type="radio" class="custom-control-input" value="3" name="Stanford_Lights"
+                            formControlName="Stanford_Lights">
                         <label class="custom-control-label" for="ls3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="lsR" type="radio" class="custom-control-input" value="R" name="lightSensitivity"
-                            formControlName="lightSensitivity">
+                        <input id="lsR" type="radio" class="custom-control-input" value="R" name="Stanford_Lights"
+                            formControlName="Stanford_Lights">
                         <label class="custom-control-label" for="lsR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.lightSensitivity.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.lightSensitivity.errors.required">Field is required
+                <div *ngIf="f.Stanford_Lights.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Lights.errors.required">Field is required
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="form-row mb-3">
-            <label class="form-label">8. Bright light</label>
+            <label class="form-label">8. Noise Sensitivity, Bothered by</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.brightLight.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Noises.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="bl0" type="radio" class="custom-control-input" value="0" name="brightLight"
-                            formControlName="brightLight">
-                        <label class="custom-control-label" for="bl0">0 = Never Experienced
-                        </label>
-                    </div>
-                    <div style="margin-right: 3rem;">
-                        <input id="bl1" type="radio" class="custom-control-input" value="1" name="brightLight"
-                            formControlName="brightLight">
-                        <label class="custom-control-label" for="bl1">1 = Mild
-                        </label>
-                    </div>
-                    <div style="margin-right: 3rem;">
-                        <input id="bl2" type="radio" class="custom-control-input" value="2" name="brightLight"
-                            formControlName="brightLight">
-                        <label class="custom-control-label" for="bl2">2 = Moderate
-                        </label>
-                    </div>
-                    <div style="margin-right: 3rem;">
-                        <input id="bl3" type="radio" class="custom-control-input" value="3" name="brightLight"
-                            formControlName="brightLight">
-                        <label class="custom-control-label" for="bl3">3 = Severe
-                        </label>
-                    </div>
-                    <div style="margin-right: 3rem;">
-                        <input id="blR" type="radio" class="custom-control-input" value="R" name="brightLight"
-                            formControlName="brightLight">
-                        <label class="custom-control-label" for="blR">R = Resolved
-                        </label>
-                    </div>
-                </div>
-                <div *ngIf="f.brightLight.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.brightLight.errors.required">Field is required
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="form-row mb-3">
-            <label class="form-label">9. Noise Sensitivity, Bothered by</label>
-            <div class="col-12 pl-4">
-                <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.noiseSensitivity.errors && formRef.submitted }">
-                    <div style="margin-right: 3rem;">
-                        <input id="noi0" type="radio" class="custom-control-input" value="0" name="noiseSensitivity"
-                            formControlName="noiseSensitivity">
+                        <input id="noi0" type="radio" class="custom-control-input" value="0" name="Stanford_Noises"
+                            formControlName="Stanford_Noises">
                         <label class="custom-control-label" for="noi0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="noi1" type="radio" class="custom-control-input" value="1" name="noiseSensitivity"
-                            formControlName="noiseSensitivity">
+                        <input id="noi1" type="radio" class="custom-control-input" value="1" name="Stanford_Noises"
+                            formControlName="Stanford_Noises">
                         <label class="custom-control-label" for="noi1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="noi2" type="radio" class="custom-control-input" value="2" name="noiseSensitivity"
-                            formControlName="noiseSensitivity">
+                        <input id="noi2" type="radio" class="custom-control-input" value="2" name="Stanford_Noises"
+                            formControlName="Stanford_Noises">
                         <label class="custom-control-label" for="noi2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="noiseSensitivity3" type="radio" class="custom-control-input" value="3" name="noiseSensitivity"
-                            formControlName="noiseSensitivity">
-                        <label class="custom-control-label" for="noiseSensitivity3">3 = Severe
+                        <input id="Stanford_Noises3" type="radio" class="custom-control-input" value="3" name="Stanford_Noises"
+                            formControlName="Stanford_Noises">
+                        <label class="custom-control-label" for="Stanford_Noises3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="noiseSensitivityR" type="radio" class="custom-control-input" value="R" name="noiseSensitivity"
-                            formControlName="noiseSensitivity">
-                        <label class="custom-control-label" for="noiseSensitivityR">R = Resolved
+                        <input id="Stanford_NoisesR" type="radio" class="custom-control-input" value="R" name="Stanford_Noises"
+                            formControlName="Stanford_Noises">
+                        <label class="custom-control-label" for="Stanford_NoisesR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.noiseSensitivity.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.noiseSensitivity.errors.required">Field is required
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="form-row mb-3">
-            <label class="form-label">10. Lound Noises</label>
-            <div class="col-12 pl-4">
-                <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.loudNoises.errors && formRef.submitted }">
-                    <div style="margin-right: 3rem;">
-                        <input id="loudNoises0" type="radio" class="custom-control-input" value="0" name="loudNoises"
-                            formControlName="loudNoises">
-                        <label class="custom-control-label" for="loudNoises0">0 = Never Experienced
-                        </label>
-                    </div>
-                    <div style="margin-right: 3rem;">
-                        <input id="loudNoises1" type="radio" class="custom-control-input" value="1" name="loudNoises"
-                            formControlName="loudNoises">
-                        <label class="custom-control-label" for="loudNoises1">1 = Mild
-                        </label>
-                    </div>
-                    <div style="margin-right: 3rem;">
-                        <input id="loudNoises2" type="radio" class="custom-control-input" value="2" name="loudNoises"
-                            formControlName="loudNoises">
-                        <label class="custom-control-label" for="loudNoises2">2 = Moderate
-                        </label>
-                    </div>
-                    <div style="margin-right: 3rem;">
-                        <input id="loudNoises3" type="radio" class="custom-control-input" value="3" name="loudNoises"
-                            formControlName="loudNoises">
-                        <label class="custom-control-label" for="loudNoises3">3 = Severe
-                        </label>
-                    </div>
-                    <div style="margin-right: 3rem;">
-                        <input id="loudNoisesR" type="radio" class="custom-control-input" value="R" name="loudNoises"
-                            formControlName="loudNoises">
-                        <label class="custom-control-label" for="loudNoisesR">R = Resolved
-                        </label>
-                    </div>
-                </div>
-                <div *ngIf="f.loudNoises.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.loudNoises.errors.required">Field is required
+                <div *ngIf="f.Stanford_Noises.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Noises.errors.required">Field is required
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="form-row mb-3">
-            <label class="form-label">11. Sleep Disturbance</label>
+            <label class="form-label">9. Sleep Disturbance</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.sleepDisturbance.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Sleep.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="sleepDisturbance0" type="radio" class="custom-control-input" value="0" name="sleepDisturbance"
-                            formControlName="sleepDisturbance">
-                        <label class="custom-control-label" for="sleepDisturbance0">0 = Never Experienced
+                        <input id="Stanford_Sleep0" type="radio" class="custom-control-input" value="0" name="Stanford_Sleep"
+                            formControlName="Stanford_Sleep">
+                        <label class="custom-control-label" for="Stanford_Sleep0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="sleepDisturbance1" type="radio" class="custom-control-input" value="1" name="sleepDisturbance"
-                            formControlName="sleepDisturbance">
-                        <label class="custom-control-label" for="sleepDisturbance1">1 = Mild
+                        <input id="Stanford_Sleep1" type="radio" class="custom-control-input" value="1" name="Stanford_Sleep"
+                            formControlName="Stanford_Sleep">
+                        <label class="custom-control-label" for="Stanford_Sleep1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="sleepDisturbance2" type="radio" class="custom-control-input" value="2" name="sleepDisturbance"
-                            formControlName="sleepDisturbance">
-                        <label class="custom-control-label" for="sleepDisturbance2">2 = Moderate
+                        <input id="Stanford_Sleep2" type="radio" class="custom-control-input" value="2" name="Stanford_Sleep"
+                            formControlName="Stanford_Sleep">
+                        <label class="custom-control-label" for="Stanford_Sleep2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="sleepDisturbance3" type="radio" class="custom-control-input" value="3" name="sleepDisturbance"
-                            formControlName="sleepDisturbance">
-                        <label class="custom-control-label" for="sleepDisturbance3">3 = Severe
+                        <input id="Stanford_Sleep3" type="radio" class="custom-control-input" value="3" name="Stanford_Sleep"
+                            formControlName="Stanford_Sleep">
+                        <label class="custom-control-label" for="Stanford_Sleep3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="sleepDisturbanceR" type="radio" class="custom-control-input" value="R" name="sleepDisturbance"
-                            formControlName="sleepDisturbance">
-                        <label class="custom-control-label" for="sleepDisturbanceR">R = Resolved
+                        <input id="Stanford_SleepR" type="radio" class="custom-control-input" value="R" name="Stanford_Sleep"
+                            formControlName="Stanford_Sleep">
+                        <label class="custom-control-label" for="Stanford_SleepR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.sleepDisturbance.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.sleepDisturbance.errors.required">Field is required
+                <div *ngIf="f.Stanford_Sleep.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Sleep.errors.required">Field is required
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="form-row mb-3">
-            <label class="form-label">12. Fatigue, Tiring more easily</label>
+            <label class="form-label">10. Fatigue, Tiring more easily</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.fatigue.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Fatigue.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="fatigue0" type="radio" class="custom-control-input" value="0" name="fatigue"
-                            formControlName="fatigue">
-                        <label class="custom-control-label" for="fatigue0">0 = Never Experienced
+                        <input id="Stanford_Fatigue0" type="radio" class="custom-control-input" value="0" name="Stanford_Fatigue"
+                            formControlName="Stanford_Fatigue">
+                        <label class="custom-control-label" for="Stanford_Fatigue0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="fatigue1" type="radio" class="custom-control-input" value="1" name="fatigue"
-                            formControlName="fatigue">
-                        <label class="custom-control-label" for="fatigue1">1 = Mild
+                        <input id="Stanford_Fatigue1" type="radio" class="custom-control-input" value="1" name="Stanford_Fatigue"
+                            formControlName="Stanford_Fatigue">
+                        <label class="custom-control-label" for="Stanford_Fatigue1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="fatigue2" type="radio" class="custom-control-input" value="2" name="fatigue"
-                            formControlName="fatigue">
-                        <label class="custom-control-label" for="fatigue2">2 = Moderate
+                        <input id="Stanford_Fatigue2" type="radio" class="custom-control-input" value="2" name="Stanford_Fatigue"
+                            formControlName="Stanford_Fatigue">
+                        <label class="custom-control-label" for="Stanford_Fatigue2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="fatigue3" type="radio" class="custom-control-input" value="3" name="fatigue"
-                            formControlName="fatigue">
-                        <label class="custom-control-label" for="fatigue3">3 = Severe
+                        <input id="Stanford_Fatigue3" type="radio" class="custom-control-input" value="3" name="Stanford_Fatigue"
+                            formControlName="Stanford_Fatigue">
+                        <label class="custom-control-label" for="Stanford_Fatigue3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="fatigueR" type="radio" class="custom-control-input" value="R" name="fatigue"
-                            formControlName="fatigue">
-                        <label class="custom-control-label" for="fatigueR">R = Resolved
+                        <input id="Stanford_FatigueR" type="radio" class="custom-control-input" value="R" name="Stanford_Fatigue"
+                            formControlName="Stanford_Fatigue">
+                        <label class="custom-control-label" for="Stanford_FatigueR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.fatigue.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.fatigue.errors.required">Field is required
+                <div *ngIf="f.Stanford_Fatigue.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Fatigue.errors.required">Field is required
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="form-row mb-3">
-            <label class="form-label">13. Being irritable, Easily Angered</label>
+            <label class="form-label">11. Being irritable, Easily Angered</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.beingIrritable.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Angered.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="beingIrritable0" type="radio" class="custom-control-input" value="0" name="beingIrritable"
-                            formControlName="beingIrritable">
-                        <label class="custom-control-label" for="beingIrritable0">0 = Never Experienced
+                        <input id="Stanford_Angered0" type="radio" class="custom-control-input" value="0" name="Stanford_Angered"
+                            formControlName="Stanford_Angered">
+                        <label class="custom-control-label" for="Stanford_Angered0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="beingIrritable1" type="radio" class="custom-control-input" value="1" name="beingIrritable"
-                            formControlName="beingIrritable">
-                        <label class="custom-control-label" for="beingIrritable1">1 = Mild
+                        <input id="Stanford_Angered1" type="radio" class="custom-control-input" value="1" name="Stanford_Angered"
+                            formControlName="Stanford_Angered">
+                        <label class="custom-control-label" for="Stanford_Angered1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="beingIrritable2" type="radio" class="custom-control-input" value="2" name="beingIrritable"
-                            formControlName="beingIrritable">
-                        <label class="custom-control-label" for="beingIrritable2">2 = Moderate
+                        <input id="Stanford_Angered2" type="radio" class="custom-control-input" value="2" name="Stanford_Angered"
+                            formControlName="Stanford_Angered">
+                        <label class="custom-control-label" for="Stanford_Angered2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="beingIrritable3" type="radio" class="custom-control-input" value="3" name="beingIrritable"
-                            formControlName="beingIrritable">
-                        <label class="custom-control-label" for="beingIrritable3">3 = Severe
+                        <input id="Stanford_Angered3" type="radio" class="custom-control-input" value="3" name="Stanford_Angered"
+                            formControlName="Stanford_Angered">
+                        <label class="custom-control-label" for="Stanford_Angered3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="beingIrritableR" type="radio" class="custom-control-input" value="R" name="beingIrritable"
-                            formControlName="beingIrritable">
-                        <label class="custom-control-label" for="beingIrritableR">R = Resolved
+                        <input id="Stanford_AngeredR" type="radio" class="custom-control-input" value="R" name="Stanford_Angered"
+                            formControlName="Stanford_Angered">
+                        <label class="custom-control-label" for="Stanford_AngeredR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.beingIrritable.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.beingIrritable.errors.required">Field is required
+                <div *ngIf="f.Stanford_Angered.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Angered.errors.required">Field is required
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="form-row mb-3">
-            <label class="form-label">14. Feeling Depressed or Tearful</label>
+            <label class="form-label">12. Feeling Depressed or Tearful</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.feelingDepressed.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Depression.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="feelingDepressed0" type="radio" class="custom-control-input" value="0" name="feelingDepressed"
-                            formControlName="feelingDepressed">
-                        <label class="custom-control-label" for="feelingDepressed0">0 = Never Experienced
+                        <input id="Stanford_Depression0" type="radio" class="custom-control-input" value="0" name="Stanford_Depression"
+                            formControlName="Stanford_Depression">
+                        <label class="custom-control-label" for="Stanford_Depression0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="feelingDepressed1" type="radio" class="custom-control-input" value="1" name="feelingDepressed"
-                            formControlName="feelingDepressed">
-                        <label class="custom-control-label" for="feelingDepressed1">1 = Mild
+                        <input id="Stanford_Depression1" type="radio" class="custom-control-input" value="1" name="Stanford_Depression"
+                            formControlName="Stanford_Depression">
+                        <label class="custom-control-label" for="Stanford_Depression1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="feelingDepressed2" type="radio" class="custom-control-input" value="2" name="feelingDepressed"
-                            formControlName="feelingDepressed">
-                        <label class="custom-control-label" for="feelingDepressed2">2 = Moderate
+                        <input id="Stanford_Depression2" type="radio" class="custom-control-input" value="2" name="Stanford_Depression"
+                            formControlName="Stanford_Depression">
+                        <label class="custom-control-label" for="Stanford_Depression2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="feelingDepressed3" type="radio" class="custom-control-input" value="3" name="feelingDepressed"
-                            formControlName="feelingDepressed">
-                        <label class="custom-control-label" for="feelingDepressed3">3 = Severe
+                        <input id="Stanford_Depression3" type="radio" class="custom-control-input" value="3" name="Stanford_Depression"
+                            formControlName="Stanford_Depression">
+                        <label class="custom-control-label" for="Stanford_Depression3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="feelingDepressedR" type="radio" class="custom-control-input" value="R" name="feelingDepressed"
-                            formControlName="feelingDepressed">
-                        <label class="custom-control-label" for="feelingDepressedR">R = Resolved
+                        <input id="Stanford_DepressionR" type="radio" class="custom-control-input" value="R" name="Stanford_Depression"
+                            formControlName="Stanford_Depression">
+                        <label class="custom-control-label" for="Stanford_DepressionR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.feelingDepressed.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.feelingDepressed.errors.required">Field is required
+                <div *ngIf="f.Stanford_Depression.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Depression.errors.required">Field is required
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="form-row mb-3">
-            <label class="form-label">15. Feeling Anxious or Tense</label>
+            <label class="form-label">13. Feeling Anxious or Tense</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.feelingAnxious.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Anxious.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="feelingAnxious0" type="radio" class="custom-control-input" value="0" name="feelingAnxious"
-                            formControlName="feelingAnxious">
-                        <label class="custom-control-label" for="feelingAnxious0">0 = Never Experienced
+                        <input id="Stanford_Anxious0" type="radio" class="custom-control-input" value="0" name="Stanford_Anxious"
+                            formControlName="Stanford_Anxious">
+                        <label class="custom-control-label" for="Stanford_Anxious0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="feelingAnxious1" type="radio" class="custom-control-input" value="1" name="feelingAnxious"
-                            formControlName="feelingAnxious">
-                        <label class="custom-control-label" for="feelingAnxious1">1 = Mild
+                        <input id="Stanford_Anxious1" type="radio" class="custom-control-input" value="1" name="Stanford_Anxious"
+                            formControlName="Stanford_Anxious">
+                        <label class="custom-control-label" for="Stanford_Anxious1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="feelingAnxious2" type="radio" class="custom-control-input" value="2" name="feelingAnxious"
-                            formControlName="feelingAnxious">
-                        <label class="custom-control-label" for="feelingAnxious2">2 = Moderate
+                        <input id="Stanford_Anxious2" type="radio" class="custom-control-input" value="2" name="Stanford_Anxious"
+                            formControlName="Stanford_Anxious">
+                        <label class="custom-control-label" for="Stanford_Anxious2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="feelingAnxious3" type="radio" class="custom-control-input" value="3" name="feelingAnxious"
-                            formControlName="feelingAnxious">
-                        <label class="custom-control-label" for="feelingAnxious3">3 = Severe
+                        <input id="Stanford_Anxious3" type="radio" class="custom-control-input" value="3" name="Stanford_Anxious"
+                            formControlName="Stanford_Anxious">
+                        <label class="custom-control-label" for="Stanford_Anxious3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="feelingAnxiousR" type="radio" class="custom-control-input" value="R" name="feelingAnxious"
-                            formControlName="feelingAnxious">
-                        <label class="custom-control-label" for="feelingAnxiousR">R = Resolved
+                        <input id="Stanford_AnxiousR" type="radio" class="custom-control-input" value="R" name="Stanford_Anxious"
+                            formControlName="Stanford_Anxious">
+                        <label class="custom-control-label" for="Stanford_AnxiousR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.feelingAnxious.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.feelingAnxious.errors.required">Field is required
+                <div *ngIf="f.Stanford_Anxious.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Anxious.errors.required">Field is required
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="form-row mb-3">
-            <label class="form-label">16. Poor Memory</label>
+            <label class="form-label">14. Poor Memory</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.poorMemory.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Memory.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="poorMemory0" type="radio" class="custom-control-input" value="0" name="poorMemory"
-                            formControlName="poorMemory">
-                        <label class="custom-control-label" for="poorMemory0">0 = Never Experienced
+                        <input id="Stanford_Memory0" type="radio" class="custom-control-input" value="0" name="Stanford_Memory"
+                            formControlName="Stanford_Memory">
+                        <label class="custom-control-label" for="Stanford_Memory0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="poorMemory1" type="radio" class="custom-control-input" value="1" name="poorMemory"
-                            formControlName="poorMemory">
-                        <label class="custom-control-label" for="poorMemory1">1 = Mild
+                        <input id="Stanford_Memory1" type="radio" class="custom-control-input" value="1" name="Stanford_Memory"
+                            formControlName="Stanford_Memory">
+                        <label class="custom-control-label" for="Stanford_Memory1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="poorMemory2" type="radio" class="custom-control-input" value="2" name="poorMemory"
-                            formControlName="poorMemory">
-                        <label class="custom-control-label" for="poorMemory2">2 = Moderate
+                        <input id="Stanford_Memory2" type="radio" class="custom-control-input" value="2" name="Stanford_Memory"
+                            formControlName="Stanford_Memory">
+                        <label class="custom-control-label" for="Stanford_Memory2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="poorMemory3" type="radio" class="custom-control-input" value="3" name="poorMemory"
-                            formControlName="poorMemory">
-                        <label class="custom-control-label" for="poorMemory3">3 = Severe
+                        <input id="Stanford_Memory3" type="radio" class="custom-control-input" value="3" name="Stanford_Memory"
+                            formControlName="Stanford_Memory">
+                        <label class="custom-control-label" for="Stanford_Memory3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="poorMemoryR" type="radio" class="custom-control-input" value="R" name="poorMemory"
-                            formControlName="poorMemory">
-                        <label class="custom-control-label" for="poorMemoryR">R = Resolved
+                        <input id="Stanford_MemoryR" type="radio" class="custom-control-input" value="R" name="Stanford_Memory"
+                            formControlName="Stanford_Memory">
+                        <label class="custom-control-label" for="Stanford_MemoryR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.poorMemory.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.poorMemory.errors.required">Field is required
+                <div *ngIf="f.Stanford_Memory.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Memory.errors.required">Field is required
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="form-row mb-3">
-            <label class="form-label">17. Poor Concentration</label>
+            <label class="form-label">15. Poor Concentration</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.poorConcentration.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Concentration.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="poorConcentration0" type="radio" class="custom-control-input" value="0" name="poorConcentration"
-                            formControlName="poorConcentration">
-                        <label class="custom-control-label" for="poorConcentration0">0 = Never Experienced
+                        <input id="Stanford_Concentration0" type="radio" class="custom-control-input" value="0" name="Stanford_Concentration"
+                            formControlName="Stanford_Concentration">
+                        <label class="custom-control-label" for="Stanford_Concentration0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="poorConcentration1" type="radio" class="custom-control-input" value="1" name="poorConcentration"
-                            formControlName="poorConcentration">
-                        <label class="custom-control-label" for="poorConcentration1">1 = Mild
+                        <input id="Stanford_Concentration1" type="radio" class="custom-control-input" value="1" name="Stanford_Concentration"
+                            formControlName="Stanford_Concentration">
+                        <label class="custom-control-label" for="Stanford_Concentration1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="poorConcentration2" type="radio" class="custom-control-input" value="2" name="poorConcentration"
-                            formControlName="poorConcentration">
-                        <label class="custom-control-label" for="poorConcentration2">2 = Moderate
+                        <input id="Stanford_Concentration2" type="radio" class="custom-control-input" value="2" name="Stanford_Concentration"
+                            formControlName="Stanford_Concentration">
+                        <label class="custom-control-label" for="Stanford_Concentration2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="poorConcentration3" type="radio" class="custom-control-input" value="3" name="poorConcentration"
-                            formControlName="poorConcentration">
-                        <label class="custom-control-label" for="poorConcentration3">3 = Severe
+                        <input id="Stanford_Concentration3" type="radio" class="custom-control-input" value="3" name="Stanford_Concentration"
+                            formControlName="Stanford_Concentration">
+                        <label class="custom-control-label" for="Stanford_Concentration3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="poorConcentrationR" type="radio" class="custom-control-input" value="R" name="poorConcentration"
-                            formControlName="poorConcentration">
-                        <label class="custom-control-label" for="poorConcentrationR">R = Resolved
+                        <input id="Stanford_ConcentrationR" type="radio" class="custom-control-input" value="R" name="Stanford_Concentration"
+                            formControlName="Stanford_Concentration">
+                        <label class="custom-control-label" for="Stanford_ConcentrationR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.poorConcentration.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.poorConcentration.errors.required">Field is required
+                <div *ngIf="f.Stanford_Concentration.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Concentration.errors.required">Field is required
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="form-row mb-3">
-            <label class="form-label">18. Feeling Mentally Foggy</label>
+            <label class="form-label">16. Feeling Mentally Foggy</label>
             <div class="col-12 pl-4">
                 <div class="custom-control custom-radio"
-                    [ngClass]="{ 'is-invalid': f.feelingMentallyFoggy.errors && formRef.submitted }">
+                    [ngClass]="{ 'is-invalid': f.Stanford_Mentally_Foggy.errors && formRef.submitted }">
                     <div style="margin-right: 3rem;">
-                        <input id="feelingMentallyFoggy0" type="radio" class="custom-control-input" value="0" name="feelingMentallyFoggy"
-                            formControlName="feelingMentallyFoggy">
-                        <label class="custom-control-label" for="feelingMentallyFoggy0">0 = Never Experienced
+                        <input id="Stanford_Mentally_Foggy0" type="radio" class="custom-control-input" value="0" name="Stanford_Mentally_Foggy"
+                            formControlName="Stanford_Mentally_Foggy">
+                        <label class="custom-control-label" for="Stanford_Mentally_Foggy0">0 = Never Experienced
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="feelingMentallyFoggy1" type="radio" class="custom-control-input" value="1" name="feelingMentallyFoggy"
-                            formControlName="feelingMentallyFoggy">
-                        <label class="custom-control-label" for="feelingMentallyFoggy1">1 = Mild
+                        <input id="Stanford_Mentally_Foggy1" type="radio" class="custom-control-input" value="1" name="Stanford_Mentally_Foggy"
+                            formControlName="Stanford_Mentally_Foggy">
+                        <label class="custom-control-label" for="Stanford_Mentally_Foggy1">1 = Mild
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="feelingMentallyFoggy2" type="radio" class="custom-control-input" value="2" name="feelingMentallyFoggy"
-                            formControlName="feelingMentallyFoggy">
-                        <label class="custom-control-label" for="feelingMentallyFoggy2">2 = Moderate
+                        <input id="Stanford_Mentally_Foggy2" type="radio" class="custom-control-input" value="2" name="Stanford_Mentally_Foggy"
+                            formControlName="Stanford_Mentally_Foggy">
+                        <label class="custom-control-label" for="Stanford_Mentally_Foggy2">2 = Moderate
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="feelingMentallyFoggy3" type="radio" class="custom-control-input" value="3" name="feelingMentallyFoggy"
-                            formControlName="feelingMentallyFoggy">
-                        <label class="custom-control-label" for="feelingMentallyFoggy3">3 = Severe
+                        <input id="Stanford_Mentally_Foggy3" type="radio" class="custom-control-input" value="3" name="Stanford_Mentally_Foggy"
+                            formControlName="Stanford_Mentally_Foggy">
+                        <label class="custom-control-label" for="Stanford_Mentally_Foggy3">3 = Severe
                         </label>
                     </div>
                     <div style="margin-right: 3rem;">
-                        <input id="feelingMentallyFoggyR" type="radio" class="custom-control-input" value="R" name="feelingMentallyFoggy"
-                            formControlName="feelingMentallyFoggy">
-                        <label class="custom-control-label" for="feelingMentallyFoggyR">R = Resolved
+                        <input id="Stanford_Mentally_FoggyR" type="radio" class="custom-control-input" value="R" name="Stanford_Mentally_Foggy"
+                            formControlName="Stanford_Mentally_Foggy">
+                        <label class="custom-control-label" for="Stanford_Mentally_FoggyR">R = Resolved
                         </label>
                     </div>
                 </div>
-                <div *ngIf="f.feelingMentallyFoggy.errors && formRef.submitted" class="invalid-feedback">
-                    <div *ngIf="f.feelingMentallyFoggy.errors.required">Field is required
+                <div *ngIf="f.Stanford_Mentally_Foggy.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Mentally_Foggy.errors.required">Field is required
                     </div>
                 </div>
             </div>
@@ -804,7 +718,7 @@
                 <button class="btn btn-warning btn-can-size" (click)="cancelPatient()" >Cancel</button>
               </div>
               <div class="col-auto">
-                <button class="button btn-primary btn-co-size mr-2" cdkStepperPrevious>&#8592; Previous</button>
+                <button class="btn btn-primary btn-co-size mr-2" cdkStepperPrevious>&#8592; Previous</button>
                 <button class="btn btn-primary btn-co-size" (click)="stepTwoSubmit()" cdkStepperNext>Next &#8594;</button>
               </div>
             </div>

@@ -1,14 +1,703 @@
+<img class="img-center" *ngIf="!pageLoaded" src="/assets/loading-gif.gif" />
 <div class="mb-4 text-center">
     <label class="patient_header">Section 6: Review Details</label>
 </div>
-<section class="container patient_box">
+<section class="container patient_box" [ngStyle]="!pageLoaded ? {'filter': 'blur(1px)'} : null">
     <div class="patient_forms_heading text-left mb-3">Preview</div>
     <form [formGroup]="stepSixForm" class="form-text text-left" autocomplete="off" novalidate #formRef="ngForm">
 
-        <div class="col-12 mb-3">
+        <!-- <div class="col-12 mb-3">
             <label>Review Form.... Coming up</label>
             <div class="mb-3">
                 <pre [innerHTML]="patientDetails | prettyprint"></pre>
+            </div>
+        </div> -->
+
+        <div class="form-row mb-3">
+            <label class="form-label">1. Dizziness</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Dizziness.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="d0" type="radio" class="custom-control-input" value="0" name="Stanford_Dizziness"
+                            formControlName="Stanford_Dizziness">
+                        <label class="custom-control-label" for="d0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="d1" type="radio" class="custom-control-input" value="1" name="Stanford_Dizziness"
+                            formControlName="Stanford_Dizziness">
+                        <label class="custom-control-label" for="d1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="d2" type="radio" class="custom-control-input" value="2" name="Stanford_Dizziness"
+                            formControlName="Stanford_Dizziness">
+                        <label class="custom-control-label" for="d2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="d3" type="radio" class="custom-control-input" value="3" name="Stanford_Dizziness"
+                            formControlName="Stanford_Dizziness">
+                        <label class="custom-control-label" for="d3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="dR" type="radio" class="custom-control-input" value="R" name="Stanford_Dizziness"
+                            formControlName="Stanford_Dizziness">
+                        <label class="custom-control-label" for="dR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Dizziness.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Dizziness.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">2. Headaches</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Headache.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="h0" type="radio" class="custom-control-input" value="0" name="Stanford_Headache"
+                            formControlName="Stanford_Headache">
+                        <label class="custom-control-label" for="h0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="h1" type="radio" class="custom-control-input" value="1" name="Stanford_Headache"
+                            formControlName="Stanford_Headache">
+                        <label class="custom-control-label" for="h1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="h2" type="radio" class="custom-control-input" value="2" name="Stanford_Headache"
+                            formControlName="Stanford_Headache">
+                        <label class="custom-control-label" for="h2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="h3" type="radio" class="custom-control-input" value="3" name="Stanford_Headache"
+                            formControlName="Stanford_Headache">
+                        <label class="custom-control-label" for="h3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="hR" type="radio" class="custom-control-input" value="R" name="Stanford_Headache"
+                            formControlName="Stanford_Headache">
+                        <label class="custom-control-label" for="hR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Headache.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Headache.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">3. Hearing Changes</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Hearing.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="he0" type="radio" class="custom-control-input" value="0" name="Stanford_Hearing"
+                            formControlName="Stanford_Hearing">
+                        <label class="custom-control-label" for="he0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="he1" type="radio" class="custom-control-input" value="1" name="Stanford_Hearing"
+                            formControlName="Stanford_Hearing">
+                        <label class="custom-control-label" for="he1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="he2" type="radio" class="custom-control-input" value="2" name="Stanford_Hearing"
+                            formControlName="Stanford_Hearing">
+                        <label class="custom-control-label" for="he2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="he3" type="radio" class="custom-control-input" value="3" name="Stanford_Hearing"
+                            formControlName="Stanford_Hearing">
+                        <label class="custom-control-label" for="he3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="heR" type="radio" class="custom-control-input" value="R" name="Stanford_Hearing"
+                            formControlName="Stanford_Hearing">
+                        <label class="custom-control-label" for="heR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Hearing.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Hearing.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">4. Vision Changes</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Vision.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="vi0" type="radio" class="custom-control-input" value="0" name="Stanford_Vision"
+                            formControlName="Stanford_Vision">
+                        <label class="custom-control-label" for="vi0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="vi1" type="radio" class="custom-control-input" value="1" name="Stanford_Vision"
+                            formControlName="Stanford_Vision">
+                        <label class="custom-control-label" for="vi1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="vi2" type="radio" class="custom-control-input" value="2" name="Stanford_Vision"
+                            formControlName="Stanford_Vision">
+                        <label class="custom-control-label" for="vi2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="vi3" type="radio" class="custom-control-input" value="3" name="Stanford_Vision"
+                            formControlName="Stanford_Vision">
+                        <label class="custom-control-label" for="vi3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="viR" type="radio" class="custom-control-input" value="R" name="Stanford_Vision"
+                            formControlName="Stanford_Vision">
+                        <label class="custom-control-label" for="viR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Vision.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Vision.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">5. Balance Changes</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Balance.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="ba0" type="radio" class="custom-control-input" value="0" name="Stanford_Balance"
+                            formControlName="Stanford_Balance">
+                        <label class="custom-control-label" for="ba0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="ba1" type="radio" class="custom-control-input" value="1" name="Stanford_Balance"
+                            formControlName="Stanford_Balance">
+                        <label class="custom-control-label" for="ba1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="ba2" type="radio" class="custom-control-input" value="2" name="Stanford_Balance"
+                            formControlName="Stanford_Balance">
+                        <label class="custom-control-label" for="ba2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="ba3" type="radio" class="custom-control-input" value="3" name="Stanford_Balance"
+                            formControlName="Stanford_Balance">
+                        <label class="custom-control-label" for="ba3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="baR" type="radio" class="custom-control-input" value="R" name="Stanford_Balance"
+                            formControlName="Stanford_Balance">
+                        <label class="custom-control-label" for="baR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Balance.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Balance.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">6. Nausea and/or Vomiting</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Nausea.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="nav0" type="radio" class="custom-control-input" value="0" name="Stanford_Nausea"
+                            formControlName="Stanford_Nausea">
+                        <label class="custom-control-label" for="nav0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="nav1" type="radio" class="custom-control-input" value="1" name="Stanford_Nausea"
+                            formControlName="Stanford_Nausea">
+                        <label class="custom-control-label" for="nav1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="nav2" type="radio" class="custom-control-input" value="2" name="Stanford_Nausea"
+                            formControlName="Stanford_Nausea">
+                        <label class="custom-control-label" for="nav2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="nav3" type="radio" class="custom-control-input" value="3" name="Stanford_Nausea"
+                            formControlName="Stanford_Nausea">
+                        <label class="custom-control-label" for="nav3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="navR" type="radio" class="custom-control-input" value="R" name="Stanford_Nausea"
+                            formControlName="Stanford_Nausea">
+                        <label class="custom-control-label" for="navR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Nausea.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Nausea.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">7. Light sensitivity, bothered by</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Lights.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="ls0" type="radio" class="custom-control-input" value="0" name="Stanford_Lights"
+                            formControlName="Stanford_Lights">
+                        <label class="custom-control-label" for="ls0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="ls1" type="radio" class="custom-control-input" value="1" name="Stanford_Lights"
+                            formControlName="Stanford_Lights">
+                        <label class="custom-control-label" for="ls1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="ls2" type="radio" class="custom-control-input" value="2" name="Stanford_Lights"
+                            formControlName="Stanford_Lights">
+                        <label class="custom-control-label" for="ls2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="nav3" type="radio" class="custom-control-input" value="3" name="Stanford_Lights"
+                            formControlName="Stanford_Lights">
+                        <label class="custom-control-label" for="ls3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="lsR" type="radio" class="custom-control-input" value="R" name="Stanford_Lights"
+                            formControlName="Stanford_Lights">
+                        <label class="custom-control-label" for="lsR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Lights.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Lights.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">8. Noise Sensitivity, Bothered by</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Noises.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="noi0" type="radio" class="custom-control-input" value="0" name="Stanford_Noises"
+                            formControlName="Stanford_Noises">
+                        <label class="custom-control-label" for="noi0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="noi1" type="radio" class="custom-control-input" value="1" name="Stanford_Noises"
+                            formControlName="Stanford_Noises">
+                        <label class="custom-control-label" for="noi1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="noi2" type="radio" class="custom-control-input" value="2" name="Stanford_Noises"
+                            formControlName="Stanford_Noises">
+                        <label class="custom-control-label" for="noi2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Noises3" type="radio" class="custom-control-input" value="3" name="Stanford_Noises"
+                            formControlName="Stanford_Noises">
+                        <label class="custom-control-label" for="Stanford_Noises3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_NoisesR" type="radio" class="custom-control-input" value="R" name="Stanford_Noises"
+                            formControlName="Stanford_Noises">
+                        <label class="custom-control-label" for="Stanford_NoisesR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Noises.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Noises.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">9. Sleep Disturbance</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Sleep.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Sleep0" type="radio" class="custom-control-input" value="0" name="Stanford_Sleep"
+                            formControlName="Stanford_Sleep">
+                        <label class="custom-control-label" for="Stanford_Sleep0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Sleep1" type="radio" class="custom-control-input" value="1" name="Stanford_Sleep"
+                            formControlName="Stanford_Sleep">
+                        <label class="custom-control-label" for="Stanford_Sleep1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Sleep2" type="radio" class="custom-control-input" value="2" name="Stanford_Sleep"
+                            formControlName="Stanford_Sleep">
+                        <label class="custom-control-label" for="Stanford_Sleep2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Sleep3" type="radio" class="custom-control-input" value="3" name="Stanford_Sleep"
+                            formControlName="Stanford_Sleep">
+                        <label class="custom-control-label" for="Stanford_Sleep3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_SleepR" type="radio" class="custom-control-input" value="R" name="Stanford_Sleep"
+                            formControlName="Stanford_Sleep">
+                        <label class="custom-control-label" for="Stanford_SleepR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Sleep.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Sleep.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">10. Fatigue, Tiring more easily</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Fatigue.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Fatigue0" type="radio" class="custom-control-input" value="0" name="Stanford_Fatigue"
+                            formControlName="Stanford_Fatigue">
+                        <label class="custom-control-label" for="Stanford_Fatigue0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Fatigue1" type="radio" class="custom-control-input" value="1" name="Stanford_Fatigue"
+                            formControlName="Stanford_Fatigue">
+                        <label class="custom-control-label" for="Stanford_Fatigue1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Fatigue2" type="radio" class="custom-control-input" value="2" name="Stanford_Fatigue"
+                            formControlName="Stanford_Fatigue">
+                        <label class="custom-control-label" for="Stanford_Fatigue2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Fatigue3" type="radio" class="custom-control-input" value="3" name="Stanford_Fatigue"
+                            formControlName="Stanford_Fatigue">
+                        <label class="custom-control-label" for="Stanford_Fatigue3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_FatigueR" type="radio" class="custom-control-input" value="R" name="Stanford_Fatigue"
+                            formControlName="Stanford_Fatigue">
+                        <label class="custom-control-label" for="Stanford_FatigueR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Fatigue.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Fatigue.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">11. Being irritable, Easily Angered</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Angered.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Angered0" type="radio" class="custom-control-input" value="0" name="Stanford_Angered"
+                            formControlName="Stanford_Angered">
+                        <label class="custom-control-label" for="Stanford_Angered0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Angered1" type="radio" class="custom-control-input" value="1" name="Stanford_Angered"
+                            formControlName="Stanford_Angered">
+                        <label class="custom-control-label" for="Stanford_Angered1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Angered2" type="radio" class="custom-control-input" value="2" name="Stanford_Angered"
+                            formControlName="Stanford_Angered">
+                        <label class="custom-control-label" for="Stanford_Angered2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Angered3" type="radio" class="custom-control-input" value="3" name="Stanford_Angered"
+                            formControlName="Stanford_Angered">
+                        <label class="custom-control-label" for="Stanford_Angered3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_AngeredR" type="radio" class="custom-control-input" value="R" name="Stanford_Angered"
+                            formControlName="Stanford_Angered">
+                        <label class="custom-control-label" for="Stanford_AngeredR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Angered.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Angered.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">12. Feeling Depressed or Tearful</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Depression.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Depression0" type="radio" class="custom-control-input" value="0" name="Stanford_Depression"
+                            formControlName="Stanford_Depression">
+                        <label class="custom-control-label" for="Stanford_Depression0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Depression1" type="radio" class="custom-control-input" value="1" name="Stanford_Depression"
+                            formControlName="Stanford_Depression">
+                        <label class="custom-control-label" for="Stanford_Depression1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Depression2" type="radio" class="custom-control-input" value="2" name="Stanford_Depression"
+                            formControlName="Stanford_Depression">
+                        <label class="custom-control-label" for="Stanford_Depression2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Depression3" type="radio" class="custom-control-input" value="3" name="Stanford_Depression"
+                            formControlName="Stanford_Depression">
+                        <label class="custom-control-label" for="Stanford_Depression3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_DepressionR" type="radio" class="custom-control-input" value="R" name="Stanford_Depression"
+                            formControlName="Stanford_Depression">
+                        <label class="custom-control-label" for="Stanford_DepressionR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Depression.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Depression.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">13. Feeling Anxious or Tense</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Anxious.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Anxious0" type="radio" class="custom-control-input" value="0" name="Stanford_Anxious"
+                            formControlName="Stanford_Anxious">
+                        <label class="custom-control-label" for="Stanford_Anxious0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Anxious1" type="radio" class="custom-control-input" value="1" name="Stanford_Anxious"
+                            formControlName="Stanford_Anxious">
+                        <label class="custom-control-label" for="Stanford_Anxious1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Anxious2" type="radio" class="custom-control-input" value="2" name="Stanford_Anxious"
+                            formControlName="Stanford_Anxious">
+                        <label class="custom-control-label" for="Stanford_Anxious2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Anxious3" type="radio" class="custom-control-input" value="3" name="Stanford_Anxious"
+                            formControlName="Stanford_Anxious">
+                        <label class="custom-control-label" for="Stanford_Anxious3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_AnxiousR" type="radio" class="custom-control-input" value="R" name="Stanford_Anxious"
+                            formControlName="Stanford_Anxious">
+                        <label class="custom-control-label" for="Stanford_AnxiousR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Anxious.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Anxious.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">14. Poor Memory</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Memory.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Memory0" type="radio" class="custom-control-input" value="0" name="Stanford_Memory"
+                            formControlName="Stanford_Memory">
+                        <label class="custom-control-label" for="Stanford_Memory0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Memory1" type="radio" class="custom-control-input" value="1" name="Stanford_Memory"
+                            formControlName="Stanford_Memory">
+                        <label class="custom-control-label" for="Stanford_Memory1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Memory2" type="radio" class="custom-control-input" value="2" name="Stanford_Memory"
+                            formControlName="Stanford_Memory">
+                        <label class="custom-control-label" for="Stanford_Memory2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Memory3" type="radio" class="custom-control-input" value="3" name="Stanford_Memory"
+                            formControlName="Stanford_Memory">
+                        <label class="custom-control-label" for="Stanford_Memory3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_MemoryR" type="radio" class="custom-control-input" value="R" name="Stanford_Memory"
+                            formControlName="Stanford_Memory">
+                        <label class="custom-control-label" for="Stanford_MemoryR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Memory.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Memory.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">15. Poor Concentration</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Concentration.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Concentration0" type="radio" class="custom-control-input" value="0" name="Stanford_Concentration"
+                            formControlName="Stanford_Concentration">
+                        <label class="custom-control-label" for="Stanford_Concentration0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Concentration1" type="radio" class="custom-control-input" value="1" name="Stanford_Concentration"
+                            formControlName="Stanford_Concentration">
+                        <label class="custom-control-label" for="Stanford_Concentration1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Concentration2" type="radio" class="custom-control-input" value="2" name="Stanford_Concentration"
+                            formControlName="Stanford_Concentration">
+                        <label class="custom-control-label" for="Stanford_Concentration2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Concentration3" type="radio" class="custom-control-input" value="3" name="Stanford_Concentration"
+                            formControlName="Stanford_Concentration">
+                        <label class="custom-control-label" for="Stanford_Concentration3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_ConcentrationR" type="radio" class="custom-control-input" value="R" name="Stanford_Concentration"
+                            formControlName="Stanford_Concentration">
+                        <label class="custom-control-label" for="Stanford_ConcentrationR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Concentration.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Concentration.errors.required">Field is required
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row mb-3">
+            <label class="form-label">16. Feeling Mentally Foggy</label>
+            <div class="col-12 pl-4">
+                <div class="custom-control custom-radio"
+                    [ngClass]="{ 'is-invalid': f.Stanford_Mentally_Foggy.errors && formRef.submitted }">
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Mentally_Foggy0" type="radio" class="custom-control-input" value="0" name="Stanford_Mentally_Foggy"
+                            formControlName="Stanford_Mentally_Foggy">
+                        <label class="custom-control-label" for="Stanford_Mentally_Foggy0">0 = Never Experienced
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Mentally_Foggy1" type="radio" class="custom-control-input" value="1" name="Stanford_Mentally_Foggy"
+                            formControlName="Stanford_Mentally_Foggy">
+                        <label class="custom-control-label" for="Stanford_Mentally_Foggy1">1 = Mild
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Mentally_Foggy2" type="radio" class="custom-control-input" value="2" name="Stanford_Mentally_Foggy"
+                            formControlName="Stanford_Mentally_Foggy">
+                        <label class="custom-control-label" for="Stanford_Mentally_Foggy2">2 = Moderate
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Mentally_Foggy3" type="radio" class="custom-control-input" value="3" name="Stanford_Mentally_Foggy"
+                            formControlName="Stanford_Mentally_Foggy">
+                        <label class="custom-control-label" for="Stanford_Mentally_Foggy3">3 = Severe
+                        </label>
+                    </div>
+                    <div style="margin-right: 3rem;">
+                        <input id="Stanford_Mentally_FoggyR" type="radio" class="custom-control-input" value="R" name="Stanford_Mentally_Foggy"
+                            formControlName="Stanford_Mentally_Foggy">
+                        <label class="custom-control-label" for="Stanford_Mentally_FoggyR">R = Resolved
+                        </label>
+                    </div>
+                </div>
+                <div *ngIf="f.Stanford_Mentally_Foggy.errors && formRef.submitted" class="invalid-feedback">
+                    <div *ngIf="f.Stanford_Mentally_Foggy.errors.required">Field is required
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -21,7 +710,7 @@
                 <button class="btn btn-warning btn-can-size" (click)="cancelPatient()" >Cancel</button>
               </div>
               <div class="col-auto">
-                <button class="button btn-primary btn-co-size mr-2" cdkStepperPrevious>&#8592; Previous</button>
+                <button class="btn btn-primary btn-co-size mr-2" cdkStepperPrevious>&#8592; Previous</button>
                 <button class="btn btn-primary btn-co-size" (click)="stepSixSubmit()" cdkStepperNext>Next &#8594;</button>
               </div>
             </div>

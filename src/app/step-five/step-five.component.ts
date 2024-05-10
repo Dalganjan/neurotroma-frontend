@@ -21,8 +21,6 @@ export class StepFiveComponent implements OnInit {
     private router: Router, private sharedService: SharedService
   ) {
     this.stepFiveForm = this.fb.group({
-      dateOfAccident: this.fb.control('', Validators.required),
-      dateOfAssesment: this.fb.control('', Validators.required),
       symptoms: this.fb.group({
         physical: this.fb.control(0, Validators.required),
         cognitive: this.fb.control(0, Validators.required),
@@ -30,13 +28,13 @@ export class StepFiveComponent implements OnInit {
         sleepArousal: this.fb.control(0, Validators.required),
       }),
       balance: this.fb.group({
-        mbess: this.fb.control(0, Validators.required),
+        Sway_MBESS_Percentile: this.fb.control(0, Validators.required),
       }),
       cognitive: this.fb.group({
-        memory: this.fb.control(0, Validators.required),
-        reactionTime: this.fb.control(0, Validators.required),
-        impulseControl: this.fb.control(0, Validators.required),
-        inspectionTime: this.fb.control(0, Validators.required),
+        Sway_Memory_Percentile: this.fb.control(0, Validators.required),
+        Sway_ReactionTime_Percentile: this.fb.control(0, Validators.required),
+        Sway_ImpulseControl_Percentile: this.fb.control(0, Validators.required),
+        Sway_InspectionTime_Percentile: this.fb.control(0, Validators.required),
       })
     });
   }

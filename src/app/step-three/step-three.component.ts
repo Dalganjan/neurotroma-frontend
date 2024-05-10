@@ -17,44 +17,44 @@ export class StepThreeComponent implements OnInit {
   ) {
     this.stepThreeForm = this.fb.group({
       dailyRoutine: this.fb.group({
-        dailyRoutineMeasure: this.fb.control('', Validators.required),
-        dailyRoutineText: this.fb.control('',  Validators.required)
+        CIFQ_Routine_Score: this.fb.control('', Validators.required),
+        CIFQ_Routine_Notes: this.fb.control('',  Validators.required)
       }),
       mobility: this.fb.group({
-        mobilityMeasure: this.fb.control('', Validators.required),
-        mobilityText: this.fb.control('',  Validators.required)
+        CIFQ_Mobility_Score: this.fb.control('', Validators.required),
+        CIFQ_Mobility_Notes: this.fb.control('',  Validators.required)
       }),
       household: this.fb.group({
-        householdMeasure: this.fb.control('', Validators.required),
-        householdText: this.fb.control('',  Validators.required)
+        CIFQ_Houshold_Score: this.fb.control('', Validators.required),
+        CIFQ_Houshold_Notes: this.fb.control('',  Validators.required)
       }),
       work: this.fb.group({
-        workMeasure: this.fb.control('', Validators.required),
-        workText: this.fb.control('',  Validators.required)
+        CIFQ_Work_Score: this.fb.control('', Validators.required),
+        CIFQ_Work_Notes: this.fb.control('',  Validators.required)
       }),
       social: this.fb.group({
-        socialMeasure: this.fb.control('', Validators.required),
-        socialText: this.fb.control('',  Validators.required)
+        CIFQ_Social_Score: this.fb.control('', Validators.required),
+        CIFQ_Social_Notes: this.fb.control('',  Validators.required)
       }),
       leisure: this.fb.group({
-        leisureMeasure: this.fb.control('', Validators.required),
-        leisureText: this.fb.control('',  Validators.required)
+        CIFQ_Leisure_Score: this.fb.control('', Validators.required),
+        CIFQ_Leisure_Notes: this.fb.control('',  Validators.required)
       }),
       family: this.fb.group({
-        familyMeasure: this.fb.control('', Validators.required),
-        familyText: this.fb.control('',  Validators.required)
+        CIFQ_Family_Score: this.fb.control('', Validators.required),
+        CIFQ_Family_Notes: this.fb.control('',  Validators.required)
       }),
       physical: this.fb.group({
-        physicalMeasure: this.fb.control('', Validators.required),
-        physicalText: this.fb.control('',  Validators.required)
+        CIFQ_Physical_Score: this.fb.control('', Validators.required),
+        CIFQ_Physical_Notes: this.fb.control('',  Validators.required)
       }),
       quality: this.fb.group({
-        qualityMeasure: this.fb.control('', Validators.required),
-        qualityText: this.fb.control('',  Validators.required)
+        CIFQ_QOL_Score: this.fb.control('', Validators.required),
+        CIFQ_QOL_Notes: this.fb.control('',  Validators.required)
       }),
       future: this.fb.group({
-        futureMeasure: this.fb.control('', Validators.required),
-        futureText: this.fb.control('',  Validators.required)
+        CIFQ_Future_Score: this.fb.control('', Validators.required),
+        CIFQ_Future_Notes: this.fb.control('',  Validators.required)
       }),
     });
   }

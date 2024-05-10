@@ -7,7 +7,7 @@ import { environment } from '@environments/environment';
 const httpOptions = {
 headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
-const baseUrl = `${environment.apiUrl}/api/assistants`;
+const baseUrl = `${environment.apiUrl}/assistants`;
  
 @Injectable({
 providedIn: 'root'
@@ -20,7 +20,7 @@ export class AssistantService {
     }
 
    
-    recordPatient(assistantId:string | null): Observable<any> {
+    recordPatient(assistantId:string): Observable<any> {
         return this.http.post(baseUrl + `/${assistantId}/patients`, {}, httpOptions);
     }
 
@@ -32,10 +32,14 @@ export class AssistantService {
     }
 
     updateSectionPromptResponse(assistantId: string, patientId: string, data: any): Observable<any> {
-        return this.http.post(baseUrl + `/${assistantId}/patients/${patientId}/updateSectionPromptResponse`, {
+        return this.http.put(baseUrl + `/${assistantId}/patients/${patientId}/updateSectionPromptResponse`, {
             sectionId: data.sectionId,
             sectionPromptResponse: data.sectionPromptResponse,
             updatedResponseSize: data.updatedResponseSize
         } ,httpOptions);
+    }
+
+    getSectionWiseResultByAssistantIdPatientId(assistantId: string, patientId: string): Observable<any> {
+        return this.http.get<any>(`${baseUrl}/${assistantId}/patients/${patientId}/sectionResults`);
     }
 }
